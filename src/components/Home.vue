@@ -534,7 +534,7 @@ export default {
     document.addEventListener('DOMContentLoaded', function() {
       M.Parallax.init(document.querySelectorAll('.parallax'))
       M.Tabs.init(document.querySelectorAll('.tabs'))
-    });
+    })
   }
 }
 </script>

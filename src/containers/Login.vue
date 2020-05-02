@@ -94,7 +94,7 @@ export default {
   beforeCreate:function() {
     document.addEventListener('DOMContentLoaded', function() {
       M.Parallax.init(document.querySelectorAll('.parallax'))
-    });
+    })
   }
 }
 </script>

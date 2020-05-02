@@ -153,6 +153,9 @@ nav .brand-logo img{
 
 
 
+.spinner-white,.spinner-white-only {
+  border-color: #fff;
+}
 /*
   Inputs
 */
@@ -163,47 +166,6 @@ input[type=text]:not(.browser-default)[readonly="readonly"]{
 
 input[type=text]:not(.browser-default)[readonly="readonly"]+label{
   color: rgba(255, 255, 255, 0.42);
-}
-
-/*
-  loader
-*/
-.loader {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin: 0px;
-    display: inline-block;
-    vertical-align: middle;
-}
-.loader-7 .line {
-    width: 8px;
-    position: absolute;
-    border-radius: 5px;
-    bottom: 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(#1ee95d), to(#5714ce));
-    background: -webkit-linear-gradient(top, #1ee95d, #5714ce);
-    background: -o-linear-gradient(top, #1ee95d, #5714ce);
-    background: linear-gradient(to bottom, #1ee95d, #5714ce);
-}
-
-.loader-7 .line1 {
-    left: 0;
-    -webkit-animation: line-grow 0.5s ease alternate infinite;
-    animation: line-grow 0.5s ease alternate infinite;
-}
-
-.loader-7 .line2 {
-    left: 20px;
-    -webkit-animation: line-grow 0.5s 0.2s ease alternate infinite;
-    animation: line-grow 0.5s 0.2s ease alternate infinite;
-}
-
-.loader-7 .line3 {
-    left: 40px;
-    -webkit-animation: line-grow 0.5s 0.4s ease alternate infinite;
-    animation: line-grow 0.5s 0.4s ease alternate infinite;
 }
 @-webkit-keyframes line-grow {
     0% {
@@ -501,7 +463,7 @@ body {
 .content {
   background: #FFF;
   position: absolute;
-  z-index: 10;
+  /*z-index: 10;*/
   width: calc(100% - 0px - 0%);
   height: calc(100% - 70px);
   border-radius: 0 0 3px 3px;

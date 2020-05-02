@@ -10,6 +10,8 @@ import Login from './containers/Login'
 import Admin from './containers/Admin'
 import Agencies from './containers/Agencies'
 import Agency from './containers/Agency'
+import Users from './containers/Users'
+import User from './containers/User'
 
 import * as firebase from "firebase/app"
 import "firebase/database"
@@ -29,8 +31,8 @@ const routes = [
   { path: '/agencies', component:Agencies },
   { path: '/agency/:id', component:Agency },
   { path: '/confirmation', component:Vue.component('confirmation') },
-  { path: '/users', component:Vue.component('users') },
-  { path: '/user/:id', component:Vue.component('user') },
+  { path: '/users', component:Users },
+  { path: '/user/:id', component:User },
   { path: '/profile/', component:Vue.component('profile') },
   { path: '/docs', component:Vue.component('docs') },
   { path: '/faq', component:Vue.component('faq') },

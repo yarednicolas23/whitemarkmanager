@@ -64,13 +64,19 @@
       <SideBar/>
       <div class="col s12 m12 l10 no-padding right">
         <!-- Loader -->
-        <div class="col s12 center" v-show="loader">
-          <div class="loader loader-7">
-            <div class="line line1"></div>
-            <div class="line line2"></div>
-            <div class="line line3"></div>
+        <div class="col s12 center" v-show="loader" style="margin-top:5%">
+          <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-white-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
           </div>
-          <h5 class="light gradient-text">Cargando...</h5>
+          <h5 class="white-text light">Cargando...</h5>
         </div>
         <div class="col s12 mono center white-text" v-if="agency == 0">
           <h1>😱</h1>
@@ -86,7 +92,7 @@
                  <li class="tab col s3"><a href="#info">Detalles de la agencia</a></li>
                  <li class="tab col s3"><a href="#details">Detalles Tecnicos</a></li>
                  <li class="tab col s3 hide"><a href="#atached">Adjuntos</a></li>
-                   <li class="tab col s3"><a href="#reports">Reportes</a></li>
+                 <li class="tab col s3"><a href="#reports">Reportes</a></li>
                </ul>
              </div>
              <div id="general" class="col s12">
@@ -114,28 +120,28 @@
                           <div class="col s12 m12 l10">
                             <div class="input-field">
                               <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Nombre de la Agencia">account_circle</i>
-                              <input name="agency" type="text" v-model="agency.agency" >
+                              <input name="agency" type="text" class="white-text" v-model="agency.agency" >
                               <label for="agency">Nombre de la Agencia</label>
                             </div>
                             <div class="input-field">
                               <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Correo de la Agencia">mail</i>
-                              <input name="mail" type="text" v-model="agency.mail">
+                              <input name="mail" type="text" class="white-text" v-model="agency.mail">
                               <label for="mail">Correo de la Agencia</label>
                             </div>
                             <div class="input-field">
                               <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Pagina web de la Agencia">web</i>
-                              <input name="web" type="text" v-model="agency.web">
+                              <input name="web" type="text" class="white-text" v-model="agency.web">
                               <label for="web">URL</label>
                             </div>
                             <div class="input-field">
                               <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Movil de la Agencia">phone_iphone</i>
-                              <input name="movil" type="number" v-model="agency.phone">
+                              <input name="movil" type="number" class="white-text" v-model="agency.phone">
                               <label for="icon_prefix">Movil de la Agencia</label>
                             </div>
                             <div class="input-field">
                               <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Estado de la Agencia">info_outline</i>
                               <div class="col s12" style="padding-left: 40px;">
-                                <select class="browser-default blue-grey darken-4" v-bind:value="agency.state" v-model.number="agency.state">
+                                <select class="browser-default blue-grey darken-4 white-text  " v-bind:value="agency.state" v-model.number="agency.state">
                                   <option value="" disabled selected>Estado de la Agencia</option>
                                   <option value="0">Online</option>
                                   <option value="1">Inicial</option>
@@ -703,8 +709,9 @@ export default {
             }
             setTimeout(()=> {
               M.updateTextFields()
+              M.Tabs.init(document.querySelectorAll('.tabs'))
               this.loader = false
-            }, 2000)
+            },900)
           }
         });
       });
@@ -1263,6 +1270,7 @@ export default {
     }
   },
   beforeCreate: function () {
+
     /*
     $(document).ready(()=>{
       $('.modal').modal();
