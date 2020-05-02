@@ -238,7 +238,7 @@
                    </div>
                    <div class="col s12">
                    <label>Ciudad</label>
-                   <select name="city" id="city" class="browser-default black-text" v-model="agency.country">
+                   <select name="city" id="city" class="browser-default black-text" v-model="agency.country" required>
                      <option value="" disabled selected>Selecciona tu ciudad</option>
                      <option v-bind:value="index" v-bind:key="index" v-for="(city,index) in cities.list">{{city}}</option>
                    </select>
@@ -293,8 +293,10 @@ export default {
       "users":{
         "ref": firebase.database().ref('users'),
         "list": [],
-        "exist":false,
-        "register":false
+        "exist":{
+          "mail":false,
+          "doc":false
+        }
       },
       "agencies":{
         "ref": firebase.database().ref('agencies'),
@@ -322,6 +324,10 @@ export default {
       })
     },
     sendEmail:function() {
+
+      this.$root.messageService('toast','Revisa tu email 📧 🤖')
+      return null;
+      /*
       var mail = ''+
         '<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#d6d6d5" class="" style="background-color: #efefef;border:0;border-collapse:collapse;border-spacing:0;">'+
         '<tbody><tr><td align="center" style="display:block">'+
@@ -435,14 +441,11 @@ export default {
         '<td style="font-size:0px; line-height:0px; padding-top:60px; text-align:left">&nbsp;</td>'+
         '</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>'+
         '</td></tr></tbody></table></td></tr></tbody></table>';
-
       var email = {
         to:this.agency.mail,
         subject:this.agency.agency+", Gracias por registrarte en AVIATUR",
         message:mail
       }
-
-      //sendEmail(email.to,email.subject,email.message)
       var dataMail = new FormData()
       dataMail.append('to',email.to)
       dataMail.append('subject',email.subject)
@@ -468,63 +471,60 @@ export default {
           }
         }
       })
+      */
     },
     register: function() {
-      this.loader.register = !this.loader.register
       this.users.exist = false
       this.users.ref.once('value', (users)=> {
-        this.user.agency = this.agency.nit
-        this.user.mail = this.agency.mail
-        this.user.city = this.agency.country
-        this.user.company = "aviatur"
-        this.user.fRol = 5
-        this.user.password = this.user.mail
-        
         users.forEach((user)=> {
           if (user.val().document == this.user.document) {
-              M.toast('Lo sentimos, tu Cedula se encuetra registrado 🤖', 10000)
-              this.users.exist = true
-              this.loader.register = !this.loader.register
-              return
+            this.$root.messageService('toast','Lo sentimos, tu Cedula se encuetra registrado 🤖')
+            this.users.exist = true
+            return
           }
           if (user.val().mail == this.user.mail) {
-              this.$root.messageService('toast','Lo sentimos, tu Email se encuetra registrado 🤖')
-              this.users.exist = true
-              this.loader.register = !this.loader.register
-              return
+            console.log(user.val());
+            this.$root.messageService('toast','Lo sentimos, tu Email se encuetra registrado 🤖')
+            this.users.exist = true
+            return
           }
         })
         if (this.users.exist == false) {
+          this.user.agency = this.agency.nit
+          this.user.mail = this.agency.mail
+          this.user.city = this.agency.country
+          this.user.company = "aviatur"
+          this.user.fRol = 5
+          this.user.password = this.user.mail
           firebase.database().ref('users/'+ this.user.document)
           .set(this.user)
           .then(()=> {
             this.agencies.ref.once('value', (agencies)=> {
               agencies.forEach((agency)=> {
                 if (agency.val().nit == this.agency.nit) {
-                    this.$root.messageService('toast','Lo sentimos, tu Nit se encuetra registrado 🤖')
-                    this.agencies.exist = true
-                    this.loader.register = !this.loader.register
-                    return
+                  this.$root.messageService('toast','Lo sentimos, tu Nit se encuetra registrado 🤖')
+                  this.agencies.exist = true
+                  return
                 }
               })
               if (this.agencies.exist == false) {
                 firebase.database().ref('agencies/'+ this.agency.nit)
-                .set(this.agency)
-                .then(()=> {
-                  this.$root.messageService('toast','Perfecto, ahora estas registrado  🤖')
-                  this.loader.register = !this.loader.register
-                  //sendEmail()
+                  .set(this.agency)
+                  .then(()=> {
+                    this.$root.messageService('toast','Perfecto, ahora estas registrado  🤖')
+                    this.sendEmail()
                 })
                 .catch(function (error) {
-                  console.log(error)
-                  this.$root.messageService('toast','toast','Algo salio mal, recarga la pagina por favor 🤖')
+                    console.log(error)
+                    this.$root.messageService('toast','Algo salio mal, recarga la pagina por fa 🤖')
                 })
+
               }
             })
           })
           .catch(function (error) {
               console.log(error)
-              this.$root.messageService('toast','Algo salio mal, recarga la pagina por favor 🤖')
+              this.$root.messageService('toast','Algo salio mal, recarga la pagina por fa 🤖')
           })
         }
       })
