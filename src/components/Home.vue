@@ -474,7 +474,7 @@ export default {
       data.append('to',email.to)
       data.append('subject',email.subject)
       data.append('message',email.message)
-      fetch('https://cors-anywhere.herokuapp.com/https://whitemanager.grupoaviatur.com/dir/sendMail.php',
+      fetch('dir/sendMail.php',
       {
         body:data,
         method: 'POST',
@@ -588,7 +588,7 @@ export default {
                   .then(()=> {
                     this.success()
                     this.notification()
-                    //this.sendEmail()
+                    this.sendEmail()
                 })
                 .catch(function (error) {
                   console.log(error)
