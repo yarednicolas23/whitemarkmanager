@@ -15,11 +15,11 @@
           <i class="grey-text material-icons" style="margin-left: 20px;">home</i>
         </router-link>
       </li>
-      <!-- <li v-if="nav.myagency">
+      <li v-if="nav.myagency">
           <router-link class="grey-text waves-effect waves-light tooltipped" data-position="right" data-delay="50" data-tooltip="Mi Agencia" to="/myagency">
           <i class="grey-text material-icons" style="margin-left: 20px;">home</i>
         </router-link>
-      </li>-->
+      </li>
       <li v-if="nav.myagencydesign">
         <router-link class="grey-text waves-effect waves-light tooltipped" data-position="right" data-delay="50" data-tooltip="Diseño de mi Web" to="/myagencydesign">
           <i class="grey-text material-icons" style="margin-left: 20px;">format_shapes</i>
@@ -46,7 +46,7 @@
         </router-link>
       </li>
       <li>
-        <router-link class="grey-text waves-effect waves-light tooltipped" data-position="right" data-delay="50" data-tooltip="Información +" to="/docs">
+        <router-link class="grey-text waves-effect waves-light tooltipped" data-position="right" data-delay="50" data-tooltip="Información +" to="/info">
           <i class="grey-text material-icons" style="margin-left: 20px;">find_in_page</i>
         </router-link>
       </li>
@@ -83,13 +83,14 @@
         </div>
       </li>
       <li v-if="nav.analitycs"><router-link class="grey-text waves-effect waves-light" to="/admin"><i class="grey-text material-icons">home</i>Home</router-link></li>
-      <!--<li v-if="nav.myagency"><router-link class="grey-text waves-effect waves-light" to="/myagency"><i class="grey-text material-icons">home</i>Mi Agencia</router-link></li>-->
+      <li v-if="nav.myagency" class="disabled"><router-link class="grey-text waves-effect waves-light" to="/myagency"><i class="grey-text material-icons">home</i>Mi Agencia</router-link></li>
       <li v-if="nav.myagencydesign"><router-link class="grey-text waves-effect waves-light" to="/myagencydesign"><i class="grey-text material-icons">format_shapes</i>Diseño de mi Web</router-link></li>
-      <!--<li v-if="nav.reports"><router-link class="grey-text waves-effect waves-light" to="/reports"><i class="grey-text material-icons">score</i>Reportes de Ventas</router-link></li>-->
-      <!--<li v-if="nav.transactions"><router-link class="grey-text waves-effect waves-light" to="/transactions"><i class="grey-text material-icons">compare_arrows</i>Transacciones</router-link></li>-->
+      <li v-if="nav.reports" class="hide disabled"><router-link class="grey-text waves-effect waves-light" to="/reports"><i class="grey-text material-icons">monetization_on</i>Reportes de Ventas</router-link></li>
+      <li v-if="nav.transactions" class="disabled"><router-link class="grey-text waves-effect waves-light" to="/transactions"><i class="grey-text material-icons">compare_arrows</i>Transacciones</router-link></li>
       <li v-if="nav.agencies"><router-link class="grey-text waves-effect waves-light" to="/agencies"><i class="grey-text material-icons">business_center</i>Agencias</router-link></li>
       <li v-if="nav.users"><router-link class="grey-text waves-effect waves-light" to="/users"><i class="grey-text material-icons">group</i>Usuarios</router-link></li>
-      <li><router-link class="grey-text waves-effect waves-light" to="/docs"><i class="grey-text material-icons">find_in_page</i>Información +</router-link></li>
+      <li><router-link class="grey-text waves-effect waves-light" to="/info"><i class="grey-text material-icons">find_in_page</i>Información +</router-link></li>
+      <li><router-link class="grey-text waves-effect waves-light" to="/notifications"><i class="grey-text material-icons">notifications</i>Notificaciones</router-link></li>
       <li><router-link class="grey-text waves-effect waves-light" to="/faq"><i class="grey-text material-icons">help</i>FAQ</router-link></li>
       <li><router-link class="grey-text waves-effect waves-light" to="/profile"><i class="grey-text material-icons">mood</i>Mi Perfil</router-link></li>
       <li><a v-on:click="$root.closeSession()" class="grey-text waves-effect waves-light"><i class="grey-text material-icons">exit_to_app</i>Cerrar Sesion</a></li>
@@ -98,6 +99,9 @@
       <div class="nav-wrapper">
         <a class="brand-logo text-trasnform">{{text}} {{this.user.name}}</a>
         <a data-target="slide-out" class="sidenav-trigger pointer"><i class="material-icons">menu</i></a>
+
+        <!-- Dropdown Trigger -->
+        <Notifications/>
       </div>
     </nav>
     <ul id="slide-out" class="sidenav blue-grey darken-3">
@@ -118,7 +122,7 @@
       <!--<li v-if="nav.transactions"><router-link class="grey-text waves-effect waves-light" to="/transactions"><i class="grey-text material-icons">format_shapes</i>Transacciones</router-link></li>-->
       <li v-if="nav.agencies"><router-link class="grey-text waves-effect waves-light" to="/agencies"><i class="grey-text material-icons">business_center</i>Agencias</router-link></li>
       <li v-if="nav.users"><router-link class="grey-text waves-effect waves-light" to="/users"><i class="grey-text material-icons">group</i>Usuarios</router-link></li>
-      <li><router-link class="grey-text waves-effect waves-light" to="/docs"><i class="grey-text material-icons">find_in_page</i>Información +</router-link></li>
+      <li><router-link class="grey-text waves-effect waves-light" to="/info"><i class="grey-text material-icons">find_in_page</i>Información +</router-link></li>
       <li><router-link class="grey-text waves-effect waves-light" to="/faq"><i class="grey-text material-icons">help</i>FAQ</router-link></li>
       <li><router-link class="grey-text waves-effect waves-light" to="/profile"><i class="grey-text material-icons">mood</i>Mi Perfil</router-link></li>
       <li><a v-on:click="$root.closeSession" class="grey-text waves-effect waves-light"><i class="grey-text material-icons">exit_to_app</i>Cerrar Sesion</a></li>
@@ -126,32 +130,32 @@
   </div>
 </template>
 <script>
-//  Vue.component("sideBar",
+import Notifications from './Notifications'
 import M from 'materialize-css'
 export default{
   props: {
     navTop:Boolean
   },
   data: function() {
-      return {
-        "user":{},
-        "text": "Hola",
-        "agencies":{},
-        "img": {
-          "initial": "",
-          "color": "indigo",
-          "src": ""
-        },
-        "nav":{
-          "myagencydesign":false,
-          "reports":false,
-          "myagency":false,
-          "analitycs":false,
-          "agencies":false,
-          "users":false,
-          "transactions": false
-        }
+    return {
+      "user":{},
+      "text": "Hola",
+      "agencies":{},
+      "img": {
+        "initial": "",
+        "color": "indigo",
+        "src": ""
+      },
+      "nav":{
+        "myagencydesign":false,
+        "reports":false,
+        "myagency":false,
+        "analitycs":false,
+        "agencies":false,
+        "users":false,
+        "transactions": false
       }
+    }
   },
   created:function (){
     if(this.$root.session.user==null) {
@@ -196,6 +200,9 @@ export default{
     ImgError:function () {
       this.img.src = "";
     }
+  },
+  components:{
+    Notifications
   }
 }
 </script>

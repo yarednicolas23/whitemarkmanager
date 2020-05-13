@@ -6,12 +6,18 @@ import App from './App.vue'
 
 import Home from './components/Home'
 import SideBar from './components/SideBar'
+import Notifications from './containers/Notifications'
 import Login from './containers/Login'
 import Admin from './containers/Admin'
-import Agencies from './containers/Agencies'
-import Agency from './containers/Agency'
 import Users from './containers/Users'
 import User from './containers/User'
+import Profile from './containers/Profile'
+import Agencies from './containers/Agencies'
+import Agency from './containers/Agency'
+import MyAgency from './containers/MyAgency'
+import MyAgencyDesign from './containers/MyAgencyDesign'
+import Info from './containers/Info'
+import FAQ from './containers/FAQ'
 
 import * as firebase from "firebase/app"
 import "firebase/database"
@@ -25,20 +31,21 @@ Vue.use(VueCookie)
 const routes = [
   { path: '/',name:'Home', component:Home },
   { path: '/login', component:Login },
-  { path: '/admin', name:'Admin',component:Admin },
-  { path: '/myagency', component:Vue.component('myagency') },
-  { path: '/myagencydesign', component:Vue.component('myagencydesign') },
-  { path: '/agencies', component:Agencies },
-  { path: '/agency/:id', component:Agency },
-  { path: '/confirmation', component:Vue.component('confirmation') },
   { path: '/users', component:Users },
   { path: '/user/:id', component:User },
-  { path: '/profile/', component:Vue.component('profile') },
-  { path: '/docs', component:Vue.component('docs') },
-  { path: '/faq', component:Vue.component('faq') },
-  { path: '/reports', component:Vue.component('reports') },
-  { path: '/email', component:Vue.component('email') },
-  { path: '/transactions', component:Vue.component('transactions') },
+  { path: '/profile/', component:Profile },
+  { path: '/admin', name:'Admin',component:Admin },
+  { path: '/agencies', component:Agencies },
+  { path: '/agency/:id', component:Agency },
+  { path: '/myagency', component:MyAgency },
+  { path: '/myagencydesign', component:MyAgencyDesign },
+  { path: '/confirmation', component:Vue.component('confirmation') },
+  { path: '/info',component:Info },
+  { path: '/notifications',component:Notifications},
+  { path: '/faq',component:FAQ},
+  { path: '/reports',component:Vue.component('reports')},
+  { path: '/email',component:Vue.component('email')},
+  { path: '/transactions',component:Vue.component('transactions')},
 ]
 const router = new VueRouter({
   routes // short for `routes: routes`

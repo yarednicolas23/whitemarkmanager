@@ -117,12 +117,12 @@
                          </thead>
                          <tbody>
                            <tr>
-                             <td><i class="material-icons">add_a_photo</i></td>
+                             <td><i class="material-icons">photo_size_select_large</i></td>
                              <td>Editar icono</td>
                              <td>Le permite subir el icono de su empresa</td>
                            </tr>
                            <tr>
-                             <td><i class="white-text material-icons tooltipped center">format_color_fill</i></td>
+                             <td><i class="white-text material-icons tooltipped center">burst_mode</i></td>
                              <td>Editar color</td>
                              <td>Elija la paleta de colores</td>
                            </tr>
@@ -137,7 +137,7 @@
                              <td>Edite la información visible de su empresa</td>
                            </tr>
                            <tr>
-                             <td><i class="material-icons">flip_to_front</i></td>
+                             <td><i class="material-icons">collections</i></td>
                              <td>Editar imagen de fondo</td>
                              <td>Tendra una paleta de imagenes disponible para usar de fondo en su pagina</td>
                            </tr>
@@ -272,8 +272,18 @@
         <div class="parallax">
           <img src="./../assets/img/background.jpg" style="max-width:100%">
         </div>
-     </div>
-   </div>
+      </div>
+      <!-- Modal Success -->
+      <div id="success" class="modal modal-success">
+        <div class="modal-content">
+          <h4>Perfecto, su registro está listo 🤖</h4>
+          <p>Ahora debe confirmar su cuenta dando click <router-link :to="'/confirmation?'+agency.nit">aquí</router-link> o revisando su correo.</p>
+        </div>
+        <div class="modal-footer">
+          <a class="modal-close waves-effect waves-green btn-flat">ok</a>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -303,13 +313,29 @@ export default {
         "list": [],
         "exist":false
       },
+      "notifications":{
+        "ref": firebase.database().ref('notifications')
+      },
       "loader":{
         "register":false
       }
     }
   },
+  beforeCreate:function(){},
   created:function() {
     this.getCitiesList()
+  },
+  mounted:function() {
+    document.addEventListener('DOMContentLoaded', function() {
+      M.Parallax.init(document.querySelectorAll('.parallax'))
+      M.Tabs.init(document.querySelectorAll('.tabs'))
+      M.Modal.init(document.querySelectorAll('.modal'))
+    })
+    //this.success()
+  },
+  updated:function() {
+    M.Parallax.init(document.querySelectorAll('.parallax'))
+    M.Tabs.init(document.querySelectorAll('.tabs'))
   },
   methods:{
     selectTab(tab){
@@ -473,6 +499,30 @@ export default {
       })
       */
     },
+    notification:function() {
+      this.notifications.ref.child(this.user.document).push().set({
+        icon:"notifications_active",
+        date:new Date().toString(),
+        name:"Gracias por registrarse",
+        url:"myagencydesign",
+        description:"Edite el diseño de su pagina"
+      })
+      this.notifications.ref.child('admin').push().set({
+        icon:"notifications",
+        date:new Date().toString(),
+        name:"Registro de agencia "+this.agency.agency,
+        url:"agencies",
+        description:"..."
+      })
+    },
+    success:function () {
+      this.$root.messageService('toast','Perfecto, su registrado está listo 🤖')
+
+      var Modalelem = document.querySelector('.modal-success');
+      var instance = M.Modal.init(Modalelem)
+      instance.open()
+
+    },
     register: function() {
       this.users.exist = false
       this.users.ref.once('value', (users)=> {
@@ -508,11 +558,13 @@ export default {
                 }
               })
               if (this.agencies.exist == false) {
+                this.agency.state=1
                 firebase.database().ref('agencies/'+ this.agency.nit)
                   .set(this.agency)
                   .then(()=> {
-                    this.$root.messageService('toast','Perfecto, ahora estas registrado  🤖')
-                    this.sendEmail()
+                    this.success()
+                    this.notification()
+                    //this.sendEmail()
                 })
                 .catch(function (error) {
                     console.log(error)
@@ -530,11 +582,5 @@ export default {
       })
     }
   },
-  beforeCreate:function() {
-    document.addEventListener('DOMContentLoaded', function() {
-      M.Parallax.init(document.querySelectorAll('.parallax'))
-      M.Tabs.init(document.querySelectorAll('.tabs'))
-    })
-  }
 }
 </script>

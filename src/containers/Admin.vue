@@ -3,7 +3,7 @@
       <SideBar></SideBar>
       <div class="col s12 m12 l10 right">
         <!-- Tasa de crecimiento de ventas funtion incrementIndicator() -->
-        <div id="increment" class="col s12 m12 l6">
+        <div id="increment" class="col s12 m12 l6 hide">
           <div class="card gradient-blue white-text">
             <div class="card-content">
               <div class="row">
@@ -25,7 +25,7 @@
           </div>
         </div>
         <!-- Sales of Now Month function nowMonth()-->
-        <div id="now" class="col s12 l6">
+        <div id="now" class="col s12 l6 hide">
           <div class="card gradient-orange white-text">
             <div class="card-content">
               <div class="row">
@@ -47,10 +47,10 @@
             </div>
           </div>
         </div>
-        <div id="totals" class="col s12 ">
+        <div id="totals" class="col s12">
           <div class="card gradient-dashboard white-text">
             <div class="card-content">
-              <span class="card-title">Ventas Totales del Departamento</span>
+              <span class="card-title">Total ventas por año</span>
               <div class="row">
                 <div class="col s12 l6">
                 </div>
@@ -63,7 +63,7 @@
         <div class="col s12 ">
           <div class="card gradient-dashboard white-text">
             <div class="card-content">
-              <span class="card-title">Ventas Totales por Marca</span>
+              <span class="card-title">Total ventas por marca</span>
               <div class="chart-commission-month">
                 <canvas id="chart-commission-month"></canvas>
               </div>
@@ -122,9 +122,15 @@ export default {
   components:{
     SideBar
   },
+  beforeCreate: function () {
+    M.Tooltip.init(document.querySelectorAll('.tooltipped'))
+  },
   created: function () {
     this.$root.validateSesion()
     this.getAgenciesList()
+  },
+  mounted:function() {
+    this.getSalesAllByMonth()
   },
   methods:{
     // Charts JS Card Sales Total of Agency
@@ -600,11 +606,6 @@ export default {
         }
         return shortValue+suffixes[suffixNum];
     }
-  },
-  beforeCreate: function () {
-    //this.getSalesAllByMonth()
-    //this.getAllChartsAgencies()
-    M.Tooltip.init(document.querySelectorAll('.tooltipped'))
   }
 }
 </script>

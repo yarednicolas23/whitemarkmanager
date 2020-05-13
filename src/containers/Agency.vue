@@ -4,7 +4,6 @@
   :before {
     box-sizing: border-box;
   }
-
   .bbody {
     margin: 0px auto;
     text-align: center;
@@ -58,9 +57,263 @@
   .on .toggle:after {
     color: #fff;
   }
+  @media screen and (max-width:1025px) {
+    .chrome {
+      width: 90vw;
+    }
+  }
+  /*
+    Seacher review
+  */
+  .input-review{
+    background-color: white;
+    border: none;
+    margin: 0;
+    padding: 0 8px;
+    line-height: 36px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .btn-seacher{
+    background-color: #253036;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 15px 5px;
+    -webkit-box-shadow: inset 0px -30px 40px -10px rgba(0, 0, 0, 0.15), 0px 0px 0px 0px transparent;
+    -moz-box-shadow: inset 0px -30px 40px -10px rgba(0, 0, 0, 0.15), 0px 0px 0px 0px transparent;
+    box-shadow: inset 0px -30px 40px -10px rgba(0, 0, 0, 0.15), 0px 0px 0px 0px transparent;
+    padding-bottom: 10px;
+  }
+
+  .search__engine {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px 20px !important;
+    margin: 20px;
+  }
+  .row .col.navbutton {
+      width: 11.88%;
+      margin-left: auto;
+      left: auto;
+      right: auto;
+  }
+  .btn2 {
+      display: inline-block;
+      vertical-align: middle;
+      font: inherit;
+      text-align: center;
+      border: none;
+      margin: 0;
+      cursor: pointer;
+      overflow: visible;
+      padding: 4px 17px;
+      background-color: #AD0E0E;
+      border: 1px solid #AD0E0E;
+      border-radius: 5px;
+      color: white;
+      outline: none;
+  }
+  .btn-group > .btn2:not(.btn--inactive), .btn2-group > .btn--slim:not(.btn--inactive) {
+      background-color: #fdc80e;
+      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
+  .search__btn-group {
+      float: right;
+      margin: 14px 0;
+      border-radius: 5px;
+  }
+  .btn-group > .btn2:first-child {
+      border-radius: 5px 0 0 5px;
+  }
+  .btn-group {
+      -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.12);
+      -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.12);
+  }
+  .btn-group > .btn2:last-child {
+      border-radius: 0 5px 5px 0;
+      margin-left: -1px;
+  }
+  .btn-group > .btn2:not(:first-child):not(:last-child) {
+      border-radius: 0;
+      margin-left: -1px;
+  }
+  .btn-group > .btn2 {
+      float: left;
+      position: relative;
+  }
+  .btn-group > .btn2 {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      border-color: rgba(158, 10, 97, 0);
+  }
+  .btn--inactive {
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-color: rgba(0, 0, 0, 0.5);
+  }
+  .btn--submit {
+      font-weight: 300;
+      background-color: #c81111;
+      border-color: #c81111;
+  }
+  .page-foot__social {
+      background-color: #009bf8;
+      color: #fff;
+      text-align: center;
+      padding-top: 18px;
+  }
+  .wrapper {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      margin: 0 auto;
+      padding-right: 0;
+      padding-left: 0;
+  }
+  .grid {
+      position: relative;
+      clear: both;
+      margin: 0 auto;
+      padding: 1em 0 4em;
+      list-style: none;
+      color: black;
+      text-align: center;
+      font-family: Verdana, sans-serif;
+  }
+  .grid {
+      width: 25%;
+      float: left;
+      padding-left: 9px;
+      padding-right: 9px;
+  }
+  .page-foot__legal {
+      padding-right: 18px;
+      font-size: 11px;
+      font-size: 0.6875rem;
+      line-height: 1.63636;
+      display: -webkit-box;
+  }
+  .page-head__contact {
+      padding: 14px 0;
+      position: relative;
+  }
+  .page-head__contact li {
+      line-height: 27px;
+      display: -webkit-inline-box;
+  }
+  .divider {
+      height: 1px;
+      overflow: hidden;
+      background-color: #446dd1;
+      width: 100%;
+  }
+
+  /*
+    Color Picker
+  */
+  .color-picker {
+    height:148px;
+    width:224px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.25);
+    background-color:#eee;
+    display:inline-flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    transform: scale(0,0);
+    transform-origin: bottom left;
+    transition: transform 0.2s ease;
+    will-change: transform;
+  }
+  .hex {
+    width:96px;
+    height:60px;
+    padding:8px;
+    box-sizing:border-box;
+  }
+  input[type=color] {
+    width:64px;
+    height:32px;
+    box-sizing:border-box;
+    background-color:transparent;
+    border:none;
+    cursor:pointer;
+    outline:none;
+    transition:box-shadow 0.5s ease;
+  }
+  input[type=color]:active, input[type=color]:focus {
+    box-shadow:0 5px 30px rgba(0,0,0,0.25),
+      0px -5px 10px rgba(0,0,0,0.25);
+  }
+  .color-picker2 > div {
+    width:32px;
+    height:32px;
+    cursor:pointer;
+  }
+  .translate {
+    transform:translate(0);
+    position:absolute;
+    z-index:99;
+    left:0px;
+    top:36px;
+  }
+  .container-background{
+    background-size: cover;
+  }
+  .color-picker3 {
+    width: 100%;
+    padding: 40px 0;
+  }
+
+  .base-colors,
+  .varied-colors {
+    overflow: hidden;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+
+  .color,
+  .color-var {
+    float: left;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .color {
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    width: 25px;
+    height: 25px;
+    margin: 20px;
+  }
+  .color.active {
+    -webkit-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3);
+  }
+
+  .color-var {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+  }
+  .color-var.visible {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  .color-var.active {
+    -webkit-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3);
+  }
 </style>
 <template>
-  <div class="row blue-grey darken-4">
+  <div class="row blue-grey darken-4 full-screen">
       <SideBar/>
       <div class="col s12 m12 l10 no-padding right">
         <!-- Loader -->
@@ -85,14 +338,15 @@
         <!-- General Data -->
         <div class="no-padding"  v-show="!loader">
           <!-- Tabs  -->
-          <div class="row">
-             <div class="no-padding">
+          <div>
+             <div class="col s12">
                <ul class="tabs transparent white-text">
-                 <li class="tab col s3"><a  class="active" href="#general">Información General</a></li>
-                 <li class="tab col s3"><a href="#info">Detalles de la agencia</a></li>
-                 <li class="tab col s3"><a href="#details">Detalles Tecnicos</a></li>
-                 <li class="tab col s3 hide"><a href="#atached">Adjuntos</a></li>
-                 <li class="tab col s3"><a href="#reports">Reportes</a></li>
+                 <li class="tab"><a class="active" href="#general">Información General</a></li>
+                 <li class="tab"><a href="#info">Detalles de la agencia</a></li>
+                 <li class="tab"><a href="#details">Detalles Tecnicos</a></li>
+                 <!--<li class="tab hide"><a href="#atached">Adjuntos</a></li>-->
+                 <li class="tab"><a href="#reports">Reportes</a></li>
+                 <li class="tab"><a href="#web">Diseño web</a></li>
                </ul>
              </div>
              <div id="general" class="col s12">
@@ -181,7 +435,7 @@
                                 <td class="">
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="NIT">fingerprint</i>
-                                    <input readonly="readonly" name="nit" type="text" v-model="agency.nit">
+                                    <input class="white-text" readonly="readonly" name="nit" type="text" v-model="agency.nit">
                                     <label for="icon_prefix">NIT</label>
                                   </div>
                                 </td>
@@ -190,7 +444,7 @@
                                 <td>
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="RNT">beenhere</i>
-                                    <input readonly="readonly" name="rnt" type="text"  v-model="agency.rnt">
+                                    <input class="white-text" readonly="readonly" name="rnt" type="text"  v-model="agency.rnt">
                                     <label for="icon_prefix">RNT</label>
                                   </div>
                                 </td>
@@ -199,7 +453,7 @@
                                 <td>
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Representante legal">gavel</i>
-                                    <input name="legal" type="text" v-model="agency.legal"/>
+                                    <input class="white-text" name="legal" type="text" v-model="agency.legal"/>
                                     <label for="icon_prefix">Representante legal</label>
                                   </div>
                                 </td>
@@ -208,7 +462,7 @@
                                 <td>
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Fecha de Registro">date_range</i>
-                                    <input name="date" type="text" v-model="agency.date">
+                                    <input class="white-text" name="date" type="text" v-model="agency.date">
                                     <label for="icon_prefix">Fecha de Registro</label>
                                   </div>
                                 </td>
@@ -217,7 +471,7 @@
                                 <td>
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Cuidad de la Agencia">location_on</i>
-                                    <input name="" readonly="readonly" type="text" v-model="agency.country">
+                                    <input class="white-text" name="" readonly="readonly" type="text" v-model="agency.country">
                                     <label for="icon_prefix">Cuidad de la Agencia</label>
                                   </div>
                                 </td>
@@ -226,7 +480,7 @@
                                 <td>
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Dirreción de la Agencia">my_location</i>
-                                    <input name="location" type="text" v-model="agency.location">
+                                    <input class="white-text" name="location" type="text" v-model="agency.location">
                                     <label for="icon_prefix">Dirreción de la Agencia</label>
                                   </div>
                                 </td>
@@ -252,7 +506,7 @@
                                 <td class="">
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Referer">vpn_key</i>
-                                    <input name="referer" type="text" v-model="agency.referer">
+                                    <input class="white-text" name="referer" type="text" v-model="agency.referer">
                                     <label for="referer">Referer</label>
                                   </div>
                                 </td>
@@ -261,7 +515,7 @@
                                 <td class="">
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Centro de Costos">attach_money</i>
-                                    <input name="costcenter" type="text" v-model="agency.costcenter">
+                                    <input class="white-text" name="costcenter" type="text" v-model="agency.costcenter">
                                     <label for="costcenter">Centro de Costos</label>
                                   </div>
                                 </td>
@@ -270,7 +524,7 @@
                                 <td>
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Fecha de Registro">date_range</i>
-                                    <input name="date" type="text" v-model="agency.dateend">
+                                    <input class="white-text" name="date" type="text" v-model="agency.dateend">
                                     <label for="icon_prefix">Fecha de Entrega</label>
                                   </div>
                                 </td>
@@ -279,7 +533,7 @@
                                 <td>
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Comercial de la Negociación">person_pin</i>
-                                    <input name="comercial" type="text" v-model="agency.comercial"/>
+                                    <input class="white-text" name="comercial" type="text" v-model="agency.comercial"/>
                                     <label for="comercial">Comercial de la Negociación</label>
                                   </div>
                                 </td>
@@ -328,7 +582,7 @@
                   </div>
                 </div>
              </div>
-             <div id="atached" class="col s12">
+             <!--<div id="atached" class="col s12">
                <div class="container">
                   <div class="col s12">
                     <div>
@@ -373,7 +627,6 @@
                           <div>
                             <span>PDF</span>
                           </div>
-                          <!-- v-if="file != 'liquidations'"-->
                           <a class="col s6 center" target="_blank" :key="index" :href="'../dir/marks/'+agency.referer+'/'+file" v-for="(file,index) in agency.files ">
                             <i class="material-icons blue-text" style="font-size:4rem">insert_drive_file</i>
                             <p>{{file}}</p>
@@ -430,8 +683,8 @@
                     </div>
                   </div>
                 </div>
-             </div>
-             <div id="reports" class="">
+             </div>-->
+             <div id="reports" class="col s12">
                <div class="container">
                   <div class="white-text" style="margin-top: 25px">
                       <div class="row">
@@ -540,55 +793,506 @@
                  </div>
                </div>
              </div>
+             <div id="web" class="col s12" v-if="agency.agency!=null">
+               <div class="col s12">
+                 <ul class="row">
+                   <li class="col s2">
+                     <a class="btn-flat waves-effect waves-light modal-trigger col s12 center tooltipped"
+                     data-target="image"
+                     data-position="bottom"
+                     data-delay="10"
+                     data-tooltip="Cambiar Logo"><i class="white-text material-icons">photo_size_select_large</i></a>
+                   </li>
+                   <li class="col s2 hide">
+                     <a class="btn-flat waves-effect waves-light modal-trigger col s12 center tooltipped"
+                     data-position="bottom"
+                     data-delay="10"
+                     data-tooltip="Cambiar Favicon"
+                     data-target="favicon"><i class="white-text material-icons">burst_mode</i></a>
+                   </li>
+                   <li class="col s2">
+                     <a class="btn-flat waves-effect waves-light modal-trigger col s12 center tooltipped"
+                     data-position="bottom"
+                     data-delay="10"
+                     data-tooltip="Cambiar Color Base"
+                     data-target="color"><i class="white-text material-icons">format_color_fill</i></a>
+                   </li>
+                   <li class="col s2">
+                     <a id="menu" class="btn-flat waves-effect waves-light modal-trigger col s12 center tooltipped"
+                     data-position="bottom"
+                     data-delay="10"
+                     data-tooltip="Botones Visibles"
+                     data-target="buttons"><i class="white-text material-icons">visibility</i></a>
+                   </li>
+                   <li class="col s2" v-show="false">
+                     <a class="btn-flat waves-effect waves-light modal-trigger col s12 center tooltipped"
+                     data-position="bottom"
+                     data-delay="10"
+                     data-tooltip="Información Visible"
+                     data-target="info"><i class="white-text material-icons">format_shapes</i></a>
+                   </li>
+                   <li class="col s2">
+                     <a class="btn-flat waves-effect waves-light modal-trigger col s12 center tooltipped"
+                     data-position="bottom"
+                     data-delay="10"
+                     data-tooltip="Cambiar Fondo"
+                     data-target="background"><i class="white-text material-icons">collections</i></a>
+                   </li>
+                   <li class="col s2">
+                     <a class="btn-flat blue-grey lighten-1 waves-effect waves-light modal-trigger col s12 center tooltipped"
+                     data-position="bottom"
+                     data-delay="10"
+                     data-tooltip="Guardar Cambios"
+                     v-on:click="SaveChanges()"><i class="white-text material-icons">save</i></a>
+                   </li>
+                 </ul>
+               </div>
+               <div class="col s12 m12 l12 right no-padding">
+                 <div class="col s12 no-padding">
+                 <!--<iframe class="hide" :src="'https://'+agency.web" style="width:100%;height:100vh"></iframe>-->
+                 <!-- Chrome Preview -->
+                 <div class="col s12 m12">
+                   <div class="chrome">
+                     <div class="tabs-chrome">
+                       <div class="tab-1 tab selt" style="background:#4385f5">
+                         <p>{{agency.agency}}</p>
+                         <span class="close">x</span>
+                       </div>
+                     </div>
+                     <div class="bar googleb">
+                       <div class="buttons">
+                         <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                           <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+                         </svg>
+                         <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                           <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+                         </svg>
+                         <svg style="width:30px;height:30px" id="rel" viewBox="0 0 24 24">
+                           <path d="M19,12H22.32L17.37,16.95L12.42,12H16.97C17,10.46 16.42,8.93 15.24,7.75C12.9,5.41 9.1,5.41 6.76,7.75C4.42,10.09 4.42,13.9 6.76,16.24C8.6,18.08 11.36,18.47 13.58,17.41L15.05,18.88C12,20.69 8,20.29 5.34,17.65C2.22,14.53 2.23,9.47 5.35,6.35C8.5,3.22 13.53,3.21 16.66,6.34C18.22,7.9 19,9.95 19,12Z" />
+                         </svg>
+                       </div>
+                       <p contenteditable="true" class="url">{{agency.web}}</p>
+                       <div class="urlfiller"></div>
+                     </div>
+                     <svg class="menu" style="width:24px;height:24px" viewBox="0 0 24 24">
+                       <path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" />
+                     </svg>
+                     <div class="content">
+                       <div class="row">
+                         <div class="col s12 container-background" style="box-shadow: -10px -10px 10px 10px #aaaaaa;" v-bind:style="'background-image:url(https://whitemark.grupoaviatur.com/assets/whitemark_assets/img/header/_covers/'+agency.page.background+'.jpg)'">
+                           <div class="wrapper" v-bind:class="agency.page.background=='no-image'?'':'black-trasnparent'" style="padding-bottom:20px;">
+                             <div class="col s12 no-padding" v-bind:style="'color:'+agency.page.color + ';' ">
+                               <div class="col">
+                                 <p><b>Dirección: </b> {{agency.location}}</p>
+                               </div>
+                               <div class="col">
+                                 <p>| <b> Telefono: </b> {{agency.location}} | </p>
+                               </div>
+                               <div class="col">
+                                 <p><b>Correo: </b>{{agency.mail}}</p>
+                               </div>
+                             </div>
+                             <div class="col s12 divider"></div>
+                             <div class="col s4">
+                               <img class="image" :src="agency.referer!=null?'https://whitemanager.grupoaviatur.com/dir/marks/'+agency.referer+'/'+agency.referer+'.png?'+upload.time+'':''" style="max-height:150px;" alt="Imagen perfil Aviatur Marcas Blancas">
+                             </div>
+                             <div class="col s12">
+                               <div class="col navbutton" v-if="agency.page.button.flights">
+                                 <div class="btn-seacher" v-bind:style="'background-color:'+agency.page.color + ';' ">
+                                   <img class="responsive-img" src="./../assets/img/icons/flight.svg" alt="">
+                                   Vuelos
+                                 </div>
+                               </div>
+                               <div class="col navbutton" v-if="agency.page.button.hotels">
+                                 <div class="btn-seacher"  v-bind:style="'background-color:'+agency.page.color + ';' ">
+                                   <img class="responsive-img" src="./../assets/img/icons/hotel.svg" alt="">
+                                   Hoteles
+                                 </div>
+                               </div>
+                               <div class="col navbutton" v-if="agency.page.button.flightsAndHotels">
+                                 <div class="btn-seacher"  v-bind:style="'background-color:'+agency.page.color + ';' ">
+                                   <img class="responsive-img" src="./../assets/img/icons/flight+hotel.svg" alt="">
+                                   Vuelos + Hotel
+                                 </div>
+                               </div>
+                               <div class="col navbutton" v-if="agency.page.button.packages">
+                                 <div class="btn-seacher"  v-bind:style="'background-color:'+agency.page.color + ';' ">
+                                   <img class="responsive-img" src="./../assets/img/icons/packages.svg" alt="">
+                                   Paquetes
+                                 </div>
+                               </div>
+                               <div class="col navbutton" v-if="agency.page.button.cars">
+                                 <div class="btn-seacher"  v-bind:style="'background-color:'+agency.page.color + ';' ">
+                                   <img class="responsive-img" src="./../assets/img/icons/cars.svg" alt="">
+                                   Autos
+                                 </div>
+                               </div>
+                               <div class="col navbutton" v-if="agency.page.button.cruisers">
+                                 <div class="btn-seacher"  v-bind:style="'background-color:'+agency.page.color + ';' ">
+                                   <img class="responsive-img" src="./../assets/img/icons/cruisers.svg" alt="">
+                                   Cruseros
+                                 </div>
+                               </div>
+                               <div class="col navbutton" v-if="agency.page.button.assistance">
+                                 <div class="btn-seacher"  v-bind:style="'background-color:'+agency.page.color + ';' ">
+                                   <img class="responsive-img" src="./../assets/img/icons/assistance.svg" alt="">
+                                   Asistencia
+                                 </div>
+                               </div>
+                               <div class="col navbutton" v-if="agency.page.button.bus">
+                                 <div class="btn-seacher"  v-bind:style="'background-color:'+agency.page.color + ';' ">
+                                   <img class="responsive-img" src="./../assets/img/icons/bus.svg" alt="">
+                                   Buses
+                                 </div>
+                               </div>
+                             </div>
+                             <div class="col 12"><br></div>
+                           </div>
+                         </div>
+                         <div class="wrapper search__engine">
+                           <div class="col s12">
+                             <div class="col s12 m6 l6">
+                               <h5 class="light" v-bind:style="'color:'+agency.page.color + ';' ">Comprar Vuelos Baratos</h5>
+                             </div>
+                             <div class="col s12 m6 l6">
+                               <div class="search__btn-group btn-group" role="group" aria-label="Select flight type">
+                                 <button type="button" id="vuelta" class="btn2 tooltips" :style="'background:'+agency.page.color" data-date="1" data-type="roundtrip" title="Ida y Vuelta">
+                                   <i class="material-icons">autorenew</i>
+                                   <span class="hide-availengine">
+                                     Ida y Vuelta
+                                   </span>
+                                 </button>
+                                 <button type="button" id="ida" class="btn2 btn--inactive tooltips" data-date="1" data-type="oneway" title="Solo Ida">
+                                   <i class="material-icons">redo</i>
+                                   <span class="hide-availengine">
+                                     Solo Ida
+                                   </span>
+                                 </button>
+                                 <button type="button" id="multidest" class="btn2 btn--inactive tooltips" title="Multidestino">
+                                   <i class="material-icons">repeat</i>
+                                   <span class="hide-availengine">
+                                     Multidestino
+                                   </span>
+                                 </button>
+                               </div>
+                             </div>
+                           </div>
+                           <div class="col s12">
+                             <div class="col s12 m3 l3">
+                               <input type="" name="" value="" class="input-review col s12" placeholder="Cuidad Origen">
+                             </div>
+                             <div class="col s12 m3 l3">
+                               <input type="" name="" value="" class="input-review col s12" placeholder="Cuidad Destino">
+                             </div>
+                             <div class="col s2">
+                               <input type="" name="" value="" class="input-review" placeholder="Fecha">
+                             </div>
+                             <div class="col s2">
+                               <input type="" name="" value="" class="input-review" placeholder="Fecha">
+                             </div>
+                             <div class="col s2">
+                               <select class="browser-default">
+                                   <option value="1" selected>1 Pasajero</option>
+                                   <option value="2">2 Pasajeros</option>
+                                   <option value="3">3 Pasajeros</option>
+                                 </select>
+                             </div>
+                             <br>
+                             <div class="col s12">
+                               <span class="blue-text right">Opciones Avanzadas</span>
+                             </div>
+                             <div class="col s12">
+                               <button type="button" name="button" class="btn2 btn--submit col s12">Buscar</button>
+                             </div>
+                             <div class="col s12"><br></div>
+                           </div>
+                         </div>
+                         <div class="col s12 no-padding">
+                           <footer class="page-foot">
+                             <div class="page-foot__social clearfix" v-bind:style="'background-color:'+agency.page.color + ';' ">
+                                 <div class="wrapper"></div>
+                             </div>
+                             <div class="">
+                                 <div class="wrapper">
+                                     <div class="flag page-foot__last">
+                                         <div class="flag__body page-foot__legal">
+                                           <div class="grid">
+                                             <p>
+                                               <a href="" target="_blank" v-bind:style="'color:'+agency.page.color + ';' ">Derechos del pasajero y/o deberes del transportador</a>
+                                               <br><a href="http://www.sic.gov.co/" target="_blank" rel="nofollow" v-bind:style="'color:'+agency.page.color + ';' ">SIC</a>
+                                               <br><a href="http://www.aerocivil.gov.co/" target="_blank" rel="nofollow" v-bind:style="'color:'+agency.page.color + ';' ">Aerocivil</a>
+                                               <br><a href="http://www.aviatur.com/es/terminos-y-condiciones/contrato-de-transporte-de-las-aerolineas" target="_blank"  v-bind:style="'color:'+agency.page.color + ';' ">Contrato de Transporte de Aerolíneas</a>
+                                               <br><a href="http://www.aviatur.com/es/terminos-y-condiciones-del-sitio#contra" target="_blank"  v-bind:style="'color:'+agency.page.color + ';' ">Contra la pornografía infantil</a>
+                                               <br><a href="http://www.aviatur.com/es/terminos-y-condiciones-del-sitio" target="_blank"  v-bind:style="'color:'+agency.page.color + ';' ">Términos y condiciones del Sitio</a>
+                                               <br><a href="http://www.aviatur.com/es/politica-de-privacidad" target="_blank"  v-bind:style="'color:'+agency.page.color + ';' ">Política de privacidad</a>
+                                               <br><a href="http://octopus.com.co/contenidos/clausula-de-responsabilidad" target="_blank"  v-bind:style="'color:'+agency.page.color + ';' ">Cláusula de Responsabilidad</a>
+                                               <br><a href="" v-bind:style="'color:'+agency.page.color + ';' ">Formulario de Reversión de Pagos</a>
+
+                                             </p>
+                                           </div>
+                                           <div class="grid">
+                                             <p>Todos los derechos reservados
+                                               <br>Derecho de retracto y desistimiento, según Resolución 1209 del 5/25/2015 de la UAEAC
+                                               <br>Aviatur.com 2017
+                                               <br>NIT: {{agency.nit}} | RNT No. {{agency.rnt}}
+                                               <br>{{agency.country}} - Dirección: {{agency.location}}
+                                             </p>
+                                           </div>
+                                           <div class="grid">
+                                             <p>
+                                               Celular: +(57) {{agency.phone}}
+                                               <br>Teléfono: +(57) {{agency.telephone}}
+
+                                               <br>Correos:
+                                               <br>{{agency.mail}}
+                                             </p>
+                                             </div>
+                                             <div class="flag__img page-foot__p2p grid">
+                                                 <img src="./../assets/img/icons/p2p.png" alt="Place to Pay">
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                           </footer>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
            </div>
-        </div>
-        <!-- Modal activate create mark -->
-        <div id="activatemark" class="modal">
-          <div class="modal-content">
-            <h4>¿Está seguro que desea activar esta marca?</h4>
-            <p>Recuerde que al dar click en "Activar" la pagina web estará activa en la URL que este registrada actualmente.</p>
-            <p>Recuerde también verificar los datos URL, referer, telefóno, dirección y email.</p>
-            <div class="">
-              <div class="input-field col s8">
-                <input placeholder="Bearer" id="key" type="text" v-model="this.bearer" class="validate">
-                <label for="key">Ingrese el Bearer Key:</label>
-              </div>
+         </div>
+      </div>
+      <!-- Modal activate create mark -->
+      <div id="activatemark" class="modal">
+        <div class="modal-content">
+          <h4>¿Está seguro que desea activar esta marca?</h4>
+          <p>Recuerde que al dar click en "Activar" la pagina web estará activa en la URL que este registrada actualmente.</p>
+          <p>Recuerde también verificar los datos URL, referer, telefóno, dirección y email.</p>
+          <div class="">
+            <div class="input-field col s8">
+              <input placeholder="Bearer" id="key" type="text" v-model="this.bearer" class="validate">
+              <label for="key">Ingrese el Bearer Key:</label>
             </div>
-            <div class="center" v-if="loaderservice">
-              <div class="preloader-wrapper active">
-                <div class="spinner-layer spinner-blue-only">
-                  <div class="circle-clipper left">
-                    <div class="circle"></div>
-                  </div><div class="gap-patch">
-                    <div class="circle"></div>
-                  </div><div class="circle-clipper right">
-                    <div class="circle"></div>
-                  </div>
+          </div>
+          <div class="center" v-if="loaderservice">
+            <div class="preloader-wrapper active">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal-footer" style="padding-right: 40px; padding-top: 10px;">
-            <a class="modal-close waves-effect waves-green btn-flat">No</a>
-            <a v-on:click="activateMark()" :disabled="activatebutton" class="waves-effect btn green">Activar</a>
-          </div>
         </div>
-        <div id="errorActivatemark" class="modal" style="background-color:#fff">
-          <div class="modal-content" style="color:#ff887c;">
-          <h3><i class="material-icons" style="font-size: 30px; font-weight:bold;">error_outline</i> Error al activar</h3>
-            <h5>Recuerde que necesita una Key Bearer para realizar la activación.</h5>
-          </div>
-        </div>
-        <div class="fixed-action-btn toolbar">
-          <a class="btn-floating btn-large indigo">
-            <i class="large material-icons">mode_edit</i>
-          </a>
-          <ul>
-            <li class="waves-effect waves-light tooltipped" data-position="top" data-delay="10" data-tooltip="Guardar Estadisticas"><a><i class="material-icons">insert_chart</i></a></li>
-            <li class="waves-effect waves-light tooltipped" data-position="top" data-delay="10" data-tooltip="Guardar Cambios"><a  v-on:click="SaveChanges(agency)"><i class="material-icons">save</i></a></li>
-          </ul>
+        <div class="modal-footer" style="padding-right: 40px; padding-top: 10px;">
+          <a class="modal-close waves-effect waves-green btn-flat">No</a>
+          <a v-on:click="activateMark()" :disabled="activatebutton" class="waves-effect btn green">Activar</a>
         </div>
       </div>
+      <div id="errorActivatemark" class="modal" style="background-color:#fff">
+        <div class="modal-content" style="color:#ff887c;">
+        <h3><i class="material-icons" style="font-size: 30px; font-weight:bold;">error_outline</i> Error al activar</h3>
+          <h5>Recuerde que necesita una Key Bearer para realizar la activación.</h5>
+        </div>
+      </div>
+      <!-- Modal Logo -->
+      <div id="image" class="modal bottom-sheet blue-grey darken-4" v-if="agency.agency!=null">
+        <div class="modal-content">
+          <h4 class="white-text">Logo de la agencia</h4>
+          <div class="row">
+            <div class="col s12 image_wrapper">
+              <div class="file-field input-field">
+                <form id="uploadLogo" enctype="multipart/form-data">
+                  <img class="responsive-img" style="" :src="agency.referer!=null?'https://whitemanager.grupoaviatur.com/dir/marks/'+agency.referer+'/'+agency.referer+'.png?'+upload.time+'':''"  alt="Imagen perfil Aviatur Marcas Blancas">
+                  <span class="add"><a class="btn-floating blue waves-effect waves-light"><i class="large material-icons">edit</i><input type="file" v-on:change="uploadLogo($event)"></a></span><br><br>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Logo -->
+        </div>
+        <div class="modal-footer blue-grey darken-4">
+          <a class="modal-action modal-close white-text waves-effect waves-red btn-flat">Cerrar</a>
+        </div>
+      </div>
+      <!-- Modal Color -->
+      <div id="color" class="modal bottom-sheet blue-grey darken-4" v-if="agency.agency!=null">
+        <div class="modal-content">
+          <h4 class="white-text">Editar Color de mi Agencia</h4>
+          <div class="row">
+            <!-- Color -->
+            <div class="color" :class="index" :key="index" v-for="(color,index) in colors" v-on:click="changeColor(color)"></div>
+            <div class="col s12 input-field white-text">
+              <input id="text" type="text" class="col s3" v-model="agency.page.color">
+              <input id="colorinput" type="color" class="col s3" v-model="agency.page.color">
+              <label>Color Seleccionado:</label>
+            </div>
+          </div>
+          <div class="col s12">
+            <div class="color-picker3"></div>
+          </div>
+        </div>
+        <div class="modal-footer blue-grey darken-4">
+          <a class="modal-action modal-close white-text waves-effect waves-red btn blue-grey darken-2"
+          v-on:click="SaveChanges()">
+            <i class="left material-icons">save</i>Guardar Cambios
+          </a>
+          <a class="modal-action modal-close white-text waves-effect waves-red btn-flat">Cerrar</a>
+        </div>
+      </div>
+      <!-- Modal Buttons -->
+      <div id="buttons" class="modal bottom-sheet blue-grey darken-4" v-if="agency.agency!=null">
+        <div class="modal-content">
+          <h4 class="white-text">Escoje los servicios que quieres en tu agencia:</h4>
+          <div class="row">
+              <div class="switch">
+              <table class="white-text">
+                <thead>
+                  <tr>
+                      <th>Icono</th>
+                      <th>Nombre</th>
+                      <th>Activar/Desactivar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><img src="./../assets/img/icons/flight.svg" alt="" class="responsive-img"/></td>
+                    <td>Vuelos</td>
+                    <td>
+                      <label>
+                        <input type="checkbox" name=""  v-model="agency.page.button.flights">
+                        <span class="lever"></span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="./../assets/img/icons/hotel.svg" alt="" class="responsive-img"/></td>
+                    <td>Hoteles</td>
+                    <td>
+                      <label>
+                        <input type="checkbox"  name=""  v-model="agency.page.button.hotels">
+                        <span class="lever"></span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="./../assets/img/icons/cars.svg" alt="" class="responsive-img"/></td>
+                    <td>Autos</td>
+                    <td>
+                      <label>
+                        <input type="checkbox" name="" v-model="agency.page.button.cars">
+                        <span class="lever"></span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="./../assets/img/icons/flight+hotel.svg" alt="" class="responsive-img"/></td>
+                    <td>Vuelos+Hoteles</td>
+                    <td>
+                      <label>
+                        <input type="checkbox"  name=""  v-model="agency.page.button.flightsAndHotels">
+                        <span class="lever"></span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="./../assets/img/icons/packages.svg" alt="" class="responsive-img"/></td>
+                    <td>Paquetes</td>
+                    <td>
+                      <label>
+                        <input type="checkbox"  name=""  v-model="agency.page.button.packages">
+                        <span class="lever"></span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="./../assets/img/icons/bus.svg" alt="" class="responsive-img" style ="max-width: 150px;"/></td>
+                    <td>Buses</td>
+                    <td>
+                      <label>
+                        <input type="checkbox" name=""  v-model="agency.page.button.bus">
+                        <span class="lever"></span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="./../assets/img/icons/cruisers.svg" alt="" class="responsive-img"/></td>
+                    <td>Cruceros</td>
+                    <td>
+                      <label>
+                        <input type="checkbox"  name=""  v-model="agency.page.button.cruisers">
+                        <span class="lever"></span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="./../assets/img/icons/assistance.svg" alt="" class="responsive-img"/></td>
+                    <td>Asistencia</td>
+                    <td>
+                      <label>
+                        <input type="checkbox" name="" v-model="agency.page.button.assistance">
+                        <span class="lever"></span>
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer blue-grey darken-4">
+          <a class="modal-action modal-close white-text waves-effect waves-red btn blue-grey darken-2"
+          v-on:click="SaveChanges()">
+            <i class="left material-icons">save</i>Guardar Cambios
+          </a>
+          <a class="modal-action modal-close white-text waves-effect waves-red btn-flat">Cerrar</a>
+        </div>
+      </div>
+      <!-- Modal Background -->
+      <div id="background" class="modal bottom-sheet blue-grey darken-4" style="height:70%" v-if="agency.agency!=null">
+        <div class="modal-content">
+          <h4 class="white-text">Fondo de pagina</h4>
+            <div class="col s12">
+              <div class="col s6" :key="index" v-for="(img,index) in imgs">
+                <div class="card" style="height:200px;padding-top:50px" v-if="index==0">
+                    <div class="card-content center">
+                      <a class="card-title waves-effect waves-light black-text" v-on:click="changeBackground('no-image')">Sin Imagen</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                      <img v-bind:src="'https://whitemark.grupoaviatur.com/assets/whitemark_assets/img/header/_covers/'+img+'.jpg'"/>
+                      <a class="card-title waves-effect waves-light" v-on:click="changeBackground(img)">Seleccionar</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 modal-footer blue-grey darken-4">
+              <a class="modal-action modal-close white-text waves-effect waves-red btn-flat bottom right">Cerrar</a>
+              <a class="modal-action modal-close blue-grey darken-2 white-text waves-effect waves-red btn"
+                v-on:click="SaveChanges(agency)">
+                <i class="left material-icons">save</i>Guardar Cambios
+              </a>
+            </div>
+        </div>
+      </div>
+      <div class="fixed-action-btn toolbar" v-on:click="SaveChanges()">
+        <a class="btn-floating btn-large green">
+          <i class="large material-icons">save</i>
+        </a>
+        <ul>
+          <li class="waves-effect waves-light tooltipped" data-position="top" data-delay="10" data-tooltip="Guardar Estadisticas"><a><i class="material-icons">insert_chart</i></a></li>
+          <li class="waves-effect waves-light tooltipped" data-position="top" data-delay="10" data-tooltip="Guardar Cambios"><a  v-on:click="SaveChanges(agency)"><i class="material-icons">save</i></a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -603,8 +1307,32 @@ export default {
     return {
       "bearer":"",
       "letter": "",
+      "imgs":["cover1g","cover1h","cover1","cover1i","valle","cover3","cover1d","cover1a","cover1b","cover1f","acordeon-fondo","ffh","ffh2","ffh3","ffh-fondo"],
       "colorOff": "rgba(253, 15, 21, 0.31)",
       "colorOn": "rgba(62, 160, 81, 0.89)",
+      "colors":{
+        "red":"#f44336",
+        "blue":"#2196f3",
+        "green":"#4caf50",
+        "indigo":"#3f51b5",
+        "brown":"#795548",
+        "black":"#000000",
+        "teal":"#009688",
+        "deep-orange":"#ff5722",
+        "light-blue":"#03a9f4",
+        "light-green":"#8bc34a",
+        "deep-purple":"#673ab7",
+        "amber":"#ffc107",
+        "blue-grey":"#607d8b",
+        "pink":"#e91e63",
+        "orange":"#ff9800",
+        "cyan":"#00bcd4",
+        "lime":"#cddc39",
+        "purple":"#9c27b0",
+        "yellow":"#ffeb3b",
+        "grey":"#9e9e9e",
+        "white":"#ffffff"
+      },
       "search": "",
       "checkbox":true,
       "loader":true,
@@ -691,7 +1419,7 @@ export default {
     }
   },
   methods:{
-    getAgency:function (agency) {
+    getAgency:function(agency){
       this.agencies.ref.once('value', (agencies) => {
         agencies.forEach((element) => {
           if (element.val().nit==agency) {
@@ -707,16 +1435,33 @@ export default {
             if (this.agency.date == null) {
               this.agency.date = new Date()
             }
+
+            if (this.agency.page == null) {this.agency.page = { "color":"#2196f3" }}
+            if (this.agency.page.background == null) {this.agency.page = {"background":"b1"}}
+            if (this.agency.page.button == null) {
+                this.agency.page.button = {
+                  "flights": true,
+                  "hotels": true,
+                  "flightsAndHotels": true,
+                  "packages": true,
+                  "cars": true,
+                  "bus": true,
+                  "cruisers": true,
+                  "assistance": true
+                }
+              }
+            this.loader = false
             setTimeout(()=> {
               M.updateTextFields()
               M.Tabs.init(document.querySelectorAll('.tabs'))
-              this.loader = false
+              M.Tooltip.init(document.querySelectorAll('.tooltipped'))
+              M.Modal.init(document.querySelectorAll('.modal'))
             },900)
           }
         });
       });
     },
-    getFiles:function (referer) {
+    getFiles:function(referer){
       console.log(referer);
       /*
       $.ajax({
@@ -756,7 +1501,7 @@ export default {
           }
       });*/
     },
-    addNote:function() {
+    addNote:function(){
       if (this.agency.notes==null) {
         this.agency.notes=[]
       }
@@ -790,7 +1535,7 @@ export default {
         this.$root.messageService("toast", "Algo salio mal, recarga la pagina por fa  🤖")
       })
     },
-    openModalActivateMark:function() {
+    openModalActivateMark:function(){
       var instance = M.Modal.getInstance(document.getElementById('#activatemark'))
       instance.open()
     },
@@ -800,7 +1545,7 @@ export default {
       var modal = M.Modal.getInstance(document.getElementById('#activatemark'))
       modal.close()
     },
-    activateMark:function() {
+    activateMark:function(){
       this.loaderservice=!this.loaderservice
       this.activatebutton=true
       var data={
@@ -856,38 +1601,41 @@ export default {
         }
       })*/
     },
-    uploadLogo: function (e) {
+    uploadLogo: function(e){
       var data= new FormData()
       this.upload.loader= true
       data.append('attachment_file', e.target.files[0])
       data.append('type', "upload_img_agency")
       data.append('referer', this.agency.referer)
-      /*
-      $.ajax({
-        url: 'dir/upload.php',
-        data: data,
-        cache: false,
-        contentType: false,
-        processData: false,
-        type: 'POST',
-        success: (data)=> {
-          try {
-            if (data=="ok") {
-              this.upload.loader=false
-              this.$root.messageService("toast", "Logo subido")
-              this.upload.time = new Date().getTime()
-            }
-            if (data=="error" || data!="ok") {
-              this.upload.loader=false
-              this.$root.messageService("toast", "Logo no subido")
-            }
-          } catch (e) {
+      fetch('https://cors-anywhere.herokuapp.com/https://whitemanager.grupoaviatur.com/dir/upload.php',
+      {
+        body:data,
+        method: 'POST',
+        headers:{
+          cache: false,
+          contentType:false,
+          processData:false
+        }
+      }
+      )
+      .then(res => res.text().then((s) => {
+        try {
+          if (s=="ok") {
+            this.upload.loader=false
+            this.$root.messageService("toast", "Logo subido")
+            this.upload.time = new Date().getTime()
+          }
+          if (s=="error" || s!="ok") {
             this.upload.loader=false
             this.$root.messageService("toast", "Logo no subido")
           }
-        },
-      });*/
-
+        } catch (e) {
+          this.upload.loader=false
+          this.$root.messageService("toast", "Logo no subido")
+        }
+      }))
+      .then(error => console.log('error:', error))
+      .then(response => console.log('Success:', response))
     },
     getYearsToCharts:function() {
       /*
@@ -1240,10 +1988,10 @@ export default {
     ImgError:function () {
       this.img.src = "";
     },
-    getLetter: function(){
+    getLetter:function(){
       this.letter = this.agency.agency.substring(0, 1)
     },
-    saveReport: function(){
+    saveReport:function(){
       if (this.agency.charts==null) {
         this.agency.charts = {
           "2017" : {
@@ -1267,7 +2015,13 @@ export default {
       this.agency.charts[this.formReport.year][this.formReport.type][this.formReport.month] = this.formReport.value
       this.getCharts()
       this.SaveChanges()
-    }
+    },
+    changeBackground:function (img){
+      this.agency.page.background = img
+    },
+    changeColor:function(color){
+      this.agency.page.color = color
+    },
   },
   beforeCreate: function () {
 
