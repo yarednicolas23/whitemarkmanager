@@ -13,6 +13,7 @@ import Users from './containers/Users'
 import User from './containers/User'
 import Profile from './containers/Profile'
 import Agencies from './containers/Agencies'
+import Confirmation from './containers/Confirmation'
 import Agency from './containers/Agency'
 import MyAgency from './containers/MyAgency'
 import MyAgencyDesign from './containers/MyAgencyDesign'
@@ -39,7 +40,7 @@ const routes = [
   { path: '/agency/:id', component:Agency },
   { path: '/myagency', component:MyAgency },
   { path: '/myagencydesign', component:MyAgencyDesign },
-  { path: '/confirmation', component:Vue.component('confirmation') },
+  { path: '/confirmation/:id', component:Confirmation },
   { path: '/info',component:Info },
   { path: '/notifications',component:Notifications},
   { path: '/faq',component:FAQ},

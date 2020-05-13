@@ -277,7 +277,7 @@
       <div id="success" class="modal modal-success">
         <div class="modal-content">
           <h4>Perfecto, su registro está listo 🤖</h4>
-          <p>Ahora debe confirmar su cuenta dando click <router-link :to="'/confirmation?'+agency.nit">aquí</router-link> o revisando su correo.</p>
+          <p>Ahora debe confirmar su cuenta dando click <router-link :to="'/confirmation/'+agency.nit">aquí</router-link> o revisando su correo.</p>
         </div>
         <div class="modal-footer">
           <a class="modal-close waves-effect waves-green btn-flat">ok</a>
@@ -352,8 +352,6 @@ export default {
     sendEmail:function() {
 
       this.$root.messageService('toast','Revisa tu email 📧 🤖')
-      return null;
-      /*
       var mail = ''+
         '<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#d6d6d5" class="" style="background-color: #efefef;border:0;border-collapse:collapse;border-spacing:0;">'+
         '<tbody><tr><td align="center" style="display:block">'+
@@ -411,7 +409,7 @@ export default {
         '<td class="x_p1 x_p1-p1" style="color:rgb(89,89,89); font-family:ClanPro-Book,HelveticaNeue-Light,Helvetica Neue Light,Helvetica,Arial,sans-serif; font-size:16px; line-height:28px; padding-bottom:28px; direction:ltr; text-align:left">'+
         '<p>Confirmar tu cuenta es el primer paso para ser una marca blanca AVIATUR,</p>'+
         '<p>Si uno de nuestros directores comerciales les invito a llenar el formulario, el proceso lo llevaran a cabo con dicho director,</p>'+
-        '<p>Para confirmar con tu correo da click en: <a href="https://whitemanager.grupoaviatur.com/#/confirmation?'+this.agency.nit+'">Aquí</a>,</p>'+
+        '<p>Para confirmar con tu correo da click en: <a href="https://whitemanager.grupoaviatur.com/#/confirmation/'+this.agency.nit+'">Aquí</a>,</p>'+
         '<p>Para cualquier información o duda frente al proceso de marca blanca pueden comunicarse al 3817111,  extensión 10382, o al correo: yared.toro@aviatur.com</p>'+
         '</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>'+
         '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="" style="border:none; border-collapse:collapse; border-spacing:0; width:100%">'+
@@ -472,10 +470,40 @@ export default {
         subject:this.agency.agency+", Gracias por registrarte en AVIATUR",
         message:mail
       }
-      var dataMail = new FormData()
-      dataMail.append('to',email.to)
-      dataMail.append('subject',email.subject)
-      dataMail.append('message',email.message)
+      var data = new FormData()
+      data.append('to',email.to)
+      data.append('subject',email.subject)
+      data.append('message',email.message)
+      fetch('https://cors-anywhere.herokuapp.com/https://whitemanager.grupoaviatur.com/dir/sendMail.php',
+      {
+        body:data,
+        method: 'POST',
+        headers:{
+          cache: false,
+          contentType:false,
+          processData:false
+        }
+      })
+      .then(res=>res.text().then((s)=>{
+        try {
+          if (s=="ok") {
+            this.upload.loader=false
+            this.$root.messageService("toast", "Logo subido")
+            this.upload.time = new Date().getTime()
+          }
+          if (s=="error" || s!="ok") {
+            this.upload.loader=false
+            this.$root.messageService("toast", "Logo no subido")
+          }
+        } catch (e) {
+          this.upload.loader=false
+          this.$root.messageService("toast", "Logo no subido")
+        }
+      }))
+      .then(error => console.log('error:', error))
+      .then(response => console.log('Success:', response))
+
+      /*
       this.$ajax({
         url: 'dir/sendMail.php',
         data: dataMail,
@@ -496,8 +524,7 @@ export default {
             //console.log(e)
           }
         }
-      })
-      */
+      })*/
     },
     notification:function() {
       this.notifications.ref.child(this.user.document).push().set({
@@ -517,11 +544,9 @@ export default {
     },
     success:function () {
       this.$root.messageService('toast','Perfecto, su registrado está listo 🤖')
-
       var Modalelem = document.querySelector('.modal-success');
       var instance = M.Modal.init(Modalelem)
       instance.open()
-
     },
     register: function() {
       this.users.exist = false
@@ -533,7 +558,6 @@ export default {
             return
           }
           if (user.val().mail == this.user.mail) {
-            console.log(user.val());
             this.$root.messageService('toast','Lo sentimos, tu Email se encuetra registrado 🤖')
             this.users.exist = true
             return
@@ -567,16 +591,16 @@ export default {
                     //this.sendEmail()
                 })
                 .catch(function (error) {
-                    console.log(error)
-                    this.$root.messageService('toast','Algo salio mal, recarga la pagina por fa 🤖')
+                  console.log(error)
+                  this.$root.messageService('toast','Algo salio mal, recarga la pagina por fa 🤖')
                 })
 
               }
             })
           })
           .catch(function (error) {
-              console.log(error)
-              this.$root.messageService('toast','Algo salio mal, recarga la pagina por fa 🤖')
+            console.log(error)
+            this.$root.messageService('toast','Algo salio mal, recarga la pagina por fa 🤖')
           })
         }
       })

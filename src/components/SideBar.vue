@@ -110,22 +110,28 @@
           <div class="background">
             <img src="./../assets/img/background-admin.jpg">
           </div>
-          <a href="#!user"><img class="circle" v-bind:src="'dir/users/'+this.user.document+'/'+this.user.document+'.png?'"></a>
-          <a href="#!name"><span class="white-text name text-trasnform">{{this.user.name}} {{this.user.fName}}</span></a>
-          <a href="#!email"><span class="white-text email">{{this.user.mail}}</span></a>
+          <form id="uploadImagen" enctype="multipart/form-data">
+            <div class="circle center" v-bind:class="img.color" style="padding:5px 0; margin-left: 54px" v-if="img.src==''">
+              <h4 class="light white-text" style="margin-top:10px;">{{this.user.name.substring(0, 1)}}</h4>
+            </div>
+            <img class="circle responsive-img image" v-show="img.src!=''" :src="img.src" v-on:error="ImgError" style="max-height:100px;max-width:100px" alt="Imagen perfil Aviatur Marcas Blancas">
+          </form>
+          <a><span class="white-text name text-trasnform center">{{this.user.name}} {{this.user.fName}}</span></a>
+          <a><span class="white-text email center">{{this.user.mail}}</span></a>
         </div>
       </li>
       <li v-if="nav.analitycs"><router-link class="grey-text waves-effect waves-light" to="/admin"><i class="grey-text material-icons">home</i>Home</router-link></li>
-      <!--<li v-if="nav.myagency"><router-link class="grey-text waves-effect waves-light" to="/myagency"><i class="grey-text material-icons">home</i>Mi Agencia</router-link></li>-->
+      <li v-if="nav.myagency" class="disabled"><router-link class="grey-text waves-effect waves-light" to="/myagency"><i class="grey-text material-icons">home</i>Mi Agencia</router-link></li>
       <li v-if="nav.myagencydesign"><router-link class="grey-text waves-effect waves-light" to="/myagencydesign"><i class="grey-text material-icons">format_shapes</i>Diseño de mi Web</router-link></li>
-      <!--<li v-if="nav.reports"><router-link class="grey-text waves-effect waves-light" to="/reports"><i class="grey-text material-icons">score</i>Reportes de Ventas</router-link></li>-->
-      <!--<li v-if="nav.transactions"><router-link class="grey-text waves-effect waves-light" to="/transactions"><i class="grey-text material-icons">format_shapes</i>Transacciones</router-link></li>-->
+      <li v-if="nav.reports" class="hide disabled"><router-link class="grey-text waves-effect waves-light" to="/reports"><i class="grey-text material-icons">monetization_on</i>Reportes de Ventas</router-link></li>
+      <li v-if="nav.transactions" class="disabled"><router-link class="grey-text waves-effect waves-light" to="/transactions"><i class="grey-text material-icons">compare_arrows</i>Transacciones</router-link></li>
       <li v-if="nav.agencies"><router-link class="grey-text waves-effect waves-light" to="/agencies"><i class="grey-text material-icons">business_center</i>Agencias</router-link></li>
       <li v-if="nav.users"><router-link class="grey-text waves-effect waves-light" to="/users"><i class="grey-text material-icons">group</i>Usuarios</router-link></li>
       <li><router-link class="grey-text waves-effect waves-light" to="/info"><i class="grey-text material-icons">find_in_page</i>Información +</router-link></li>
+      <li><router-link class="grey-text waves-effect waves-light" to="/notifications"><i class="grey-text material-icons">notifications</i>Notificaciones</router-link></li>
       <li><router-link class="grey-text waves-effect waves-light" to="/faq"><i class="grey-text material-icons">help</i>FAQ</router-link></li>
       <li><router-link class="grey-text waves-effect waves-light" to="/profile"><i class="grey-text material-icons">mood</i>Mi Perfil</router-link></li>
-      <li><a v-on:click="$root.closeSession" class="grey-text waves-effect waves-light"><i class="grey-text material-icons">exit_to_app</i>Cerrar Sesion</a></li>
+      <li><a v-on:click="$root.closeSession()" class="grey-text waves-effect waves-light"><i class="grey-text material-icons">exit_to_app</i>Cerrar Sesion</a></li>
     </ul>
   </div>
 </template>
@@ -166,7 +172,7 @@ export default{
       this.rolNav(this.user.fRol)
     }
   },
-  beforeCreate: function () {
+  mounted: function () {
     document.addEventListener('DOMContentLoaded', function() {
       M.Sidenav.init(document.querySelectorAll('.sidenav'))
      });

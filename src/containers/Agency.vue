@@ -365,7 +365,10 @@
                                       <h3 class="light">{{this.letter}}</h3>
                                     </div>
                                     <img class="image"  v-show="img.src!=''" :src="img.src" v-on:error="ImgError" alt="Imagen perfil Aviatur Marcas Blancas">
-                                    <span class="add"><a class="btn-floating btn-small blue waves-effect waves-light"><i class="large material-icons">edit</i><input type="file" v-on:change="uploadLogo($event)"></a></span><br><br>
+                                    <div class="center no-margin"><i class="material-icons" :class="agency.confirmation==true?'green-text':'red-text'">{{agency.confirmation==true?'check_circle':'cancel'}}</i></div>
+                                    <div class="center thin">{{agency.confirmation==true?'Cuenta confirmada':'Cuenta No confirmada'}}</div>
+
+                                    <span class="add hide"><a class="btn-floating blue waves-effect waves-light"><i class="large material-icons">edit</i><input type="file" v-on:change="uploadLogo($event)"></a></span><br><br>
                                   </form>
                                 </div>
                               </div>
@@ -1066,7 +1069,7 @@
          </div>
       </div>
       <!-- Modal activate create mark -->
-      <div id="activatemark" class="modal">
+      <div id="activatemark" class="modal activatemark">
         <div class="modal-content">
           <h4>¿Está seguro que desea activar esta marca?</h4>
           <p>Recuerde que al dar click en "Activar" la pagina web estará activa en la URL que este registrada actualmente.</p>
@@ -1096,7 +1099,7 @@
           <a v-on:click="activateMark()" :disabled="activatebutton" class="waves-effect btn green">Activar</a>
         </div>
       </div>
-      <div id="errorActivatemark" class="modal" style="background-color:#fff">
+      <div id="errorActivatemark" class="modal errorActivatemark" style="background-color:#fff">
         <div class="modal-content" style="color:#ff887c;">
         <h3><i class="material-icons" style="font-size: 30px; font-weight:bold;">error_outline</i> Error al activar</h3>
           <h5>Recuerde que necesita una Key Bearer para realizar la activación.</h5>
@@ -1536,13 +1539,16 @@ export default {
       })
     },
     openModalActivateMark:function(){
-      var instance = M.Modal.getInstance(document.getElementById('#activatemark'))
+      var Modalelem = document.querySelector('.activatemark');
+      var instance = M.Modal.init(Modalelem)
       instance.open()
     },
     openModalErrorActivateMark:function() {
-      var instance = M.Modal.getInstance(document.getElementById('#errorActivatemark'))
+      var Modalelem = document.querySelector('.errorActivatemark');
+      var instance = M.Modal.init(Modalelem)
       instance.open()
-      var modal = M.Modal.getInstance(document.getElementById('#activatemark'))
+      var modalactivate = document.querySelector('.activatemark');
+      var modal = M.Modal.init(modalactivate)
       modal.close()
     },
     activateMark:function(){
@@ -2023,24 +2029,6 @@ export default {
       this.agency.page.color = color
     },
   },
-  beforeCreate: function () {
-
-    /*
-    $(document).ready(()=>{
-      $('.modal').modal();
-      $('.tabs').tabs();
-      $('input#input_text, textarea#note').characterCounter()
-      $('.collapsible').collapsible()
-      $('.tooltipped').tooltip({delay: 50})
-      $('.datepicker').pickadate({
-        selectMonths: true, // Creates a dropdown to control month
-        selectYears: 15, // Creates a dropdown of 15 years to control year,
-        today: 'Today',
-        clear: 'Clear',
-        close: 'Ok',
-        closeOnSelect: false // Close upon selecting a date,
-      });
-    })*/
-  }
+  beforeCreate:function(){ }
 }
 </script>

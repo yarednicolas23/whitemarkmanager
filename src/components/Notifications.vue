@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="right">
-      <li><span class="badge red white-text" style="border-radius:15px;min-width:1rem;margin-top:5px">{{list.length}}</span><a class='dropdown-trigger' data-target='notifications'><i class="material-icons">notifications</i></a></li>
+      <li><span class="badge red white-text" style="border-radius:15px;min-width:1rem;margin-top:5px">{{Object.keys(this.list).length}}</span><a class='dropdown-trigger' data-target='notifications'><i class="material-icons">notifications</i></a></li>
     </ul>
     <!-- Dropdown Structure -->
     <ul id='notifications' class='dropdown-content' style="min-width:400px;width:400px">
@@ -43,6 +43,13 @@ export default {
             this.list=n.val()
           }
         })
+        if (this.$root.session.user.fRol=='1') {
+          snapshot.forEach((n)=> {
+            if (n.key=='admin') {
+              this.list=n.val()
+            }
+          })
+        }
       })
     }
   }
