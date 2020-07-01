@@ -1086,7 +1086,8 @@ export default{
       data.append('attachment_file', e.target.files[0])
       data.append('type', "upload_img_agency")
       data.append('referer', this.agency.referer)
-      fetch('https://cors-anywhere.herokuapp.com/https://whitemanager.grupoaviatur.com/dir/upload.php',
+      //fetch('https://cors-anywhere.herokuapp.com/https://whitemanager.grupoaviatur.com/dir/upload.php',
+      fetch('/dir/upload.php',
       {
         body:data,
         method: 'POST',

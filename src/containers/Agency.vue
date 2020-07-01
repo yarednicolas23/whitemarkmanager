@@ -1076,7 +1076,7 @@
           <p>Recuerde también verificar los datos URL, referer, telefóno, dirección y email.</p>
           <div class="">
             <div class="input-field col s8">
-              <input placeholder="Bearer" id="key" type="text" v-model="this.bearer" class="validate">
+              <input placeholder="Bearer" id="key" type="text" v-model="bearer" class="validate">
               <label for="key">Ingrese el Bearer Key:</label>
             </div>
           </div>
@@ -1554,7 +1554,7 @@ export default {
     activateMark:function(){
       this.loaderservice=!this.loaderservice
       this.activatebutton=true
-      var data={
+      var d={
         "agency":  "Aviatur S.A Marcas Blancas",
         "name": this.agency.referer,
         "url": this.agency.web,
@@ -1565,7 +1565,21 @@ export default {
         "email": this.agency.mail,
         "officeId": ""
       }
-      console.log(JSON.stringify(data));
+      console.log(JSON.stringify(d));
+      var data = JSON.stringify({});
+      var url = 'https://qa.aviatur.com/api/whitemark/new';
+
+      fetch(url, {
+        method: 'POST', // or 'PUT'
+        body: data, // data can be `string` or {object}!
+        headers:{
+          'authorization':"Bearer "+this.bearer,
+          'Content-Type': 'application/json'
+        }
+      }).then(res => res.json())
+      .catch(error => console.error('Error:', error))
+      .then(response => console.log('Success:', response));
+
       /*
       $.ajax({
         "async": true,
@@ -1613,7 +1627,7 @@ export default {
       data.append('attachment_file', e.target.files[0])
       data.append('type', "upload_img_agency")
       data.append('referer', this.agency.referer)
-      fetch('https://cors-anywhere.herokuapp.com/https://whitemanager.grupoaviatur.com/dir/upload.php',
+      fetch('/dir/upload.php',
       {
         body:data,
         method: 'POST',
