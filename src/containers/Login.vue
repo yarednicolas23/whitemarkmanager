@@ -1,11 +1,7 @@
 <template>
-  <div class="parallax-container full-screen">
     <div class="row">
       <div class="col s12">
-        <form class="col s12 m6 l6 offset-l3 white-text centered-top" v-on:submit.prevent="login">
-          <div class="col s12 center">
-            <img src="http://www.aviatur.com/version/478/assets/aviatur_assets/img/header/aviatur_logo_beach.svg" class="responsive-img" alt="">
-          </div>
+        <form class="col s12" v-on:submit.prevent="login">
           <div class="input-field col s12">
             <i class="material-icons prefix">email</i>
             <input id="email" type="email" class="validate" required v-model="form.user.mail">
@@ -24,8 +20,6 @@
         </form>
       </div>
     </div>
-    <div class="parallax"><img src="./../assets/img/background-beach.jpg" style="max-width:100%;opacity:1"></div>
-   </div>
 </template>
 <script>
 import M from 'materialize-css'

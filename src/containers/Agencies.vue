@@ -1,12 +1,12 @@
 <template>
-  <div class="row blue-grey darken-4">
+  <div class="row">
       <SideBar/>
-      <nav class="col s12 m12 l10 right blue-grey darken-3">
+      <nav class="col s12 m12 l10 right white">
         <div class="nav-wrapper">
           <form>
             <div class="input-field">
               <input id="search" type="search" v-model="search" required>
-              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <label class="label-icon" for="search"><i class="material-icons grey-text">search</i></label>
               <i class="material-icons">close</i>
             </div>
           </form>
@@ -31,37 +31,37 @@
           <div class="col s12 m6 l4">
             <div class="col s12 " v-bind:key="index" v-for="(agency,index) in onlineList">
                 <a v-bind:href="'#/agency/'+agency.nit" class="collection-item avatar transparent no-border waves-effect">
-                    <i class="circle blue-dark-gradient white-text">{{agency.agency.substring(0, 1)}}</i>
-                    <span class="title white-text text-trasnform">{{limitText(agency.agency)}} -</span><span class="grey-text"> {{getCountry(agency.country)}}</span>
-                    <p class="grey-text">
-                        <span v-bind:class="'chip white-text '+colorState(agency.state)">{{getState(agency.state)}}</span>
-                    </p>
-                    <div class="secondary-content btn-flat waves-effect" v-on:click="clickAgency(index)"><i class="material-icons grey-text tooltipped" data-position="top" data-delay="5" data-tooltip="Ver Detalles de la Reserva">more_vert</i></div>
+                  <i class="circle blue-dark-gradient">{{agency.agency.substring(0, 1)}}</i>
+                  <b class="black-text text-trasnform">{{limitText(agency.agency)}}</b>
+                  <p class="grey-text"> {{getCountry(agency.country)}}</p>
+                  <p class="grey-text">
+                      <span v-bind:class="'chip white-text '+colorState(agency.state)">{{getState(agency.state)}}</span>
+                  </p>
                 </a>
             </div>
           </div>
           <div class="col s12 m6 l4">
             <div class="col s12 " v-bind:key="index" v-for="(agency,index) in initialList">
                 <a v-bind:href="'#/agency/'+agency.nit" class="collection-item avatar transparent no-border waves-effect">
-                    <i class="circle blue-dark-gradient white-text">{{agency.agency.substring(0, 1)}}</i>
-                    <span class="title white-text text-trasnform">{{limitText(agency.agency)}} -</span><span class="grey-text"> {{getCountry(agency.country)}}</span>
-                    <p class="grey-text">
-                        <span v-bind:class="'chip white-text '+colorState(agency.state)">{{getState(agency.state)}}</span>
-                    </p>
-                    <div class="secondary-content btn-flat waves-effect" v-on:click="clickAgency(index)"><i class="material-icons grey-text tooltipped" data-position="top" data-delay="5" data-tooltip="Ver Detalles de la Reserva">more_vert</i></div>
+                  <i class="circle blue-dark-gradient white-text">{{agency.agency.substring(0, 1)}}</i>
+                  <b class="black-text text-trasnform">{{limitText(agency.agency)}}</b>
+                  <p class="grey-text"> {{getCountry(agency.country)}}</p>
+                  <p class="grey-text">
+                      <span v-bind:class="'chip white-text '+colorState(agency.state)">{{getState(agency.state)}}</span>
+                  </p>
                 </a>
             </div>
           </div>
           <div class="col s12 m6 l4">
             <div class="col s12" v-bind:key="index" v-for="(agency,index) in offlineList">
-                <a v-bind:href="'#/agency/'+agency.nit" class="collection-item avatar transparent no-border waves-effect">
-                    <i class="circle blue-dark-gradient white-text">{{agency.agency.substring(0, 1)}}</i>
-                    <span class="title white-text text-trasnform">{{limitText(agency.agency)}} -</span><span class="grey-text"> {{getCountry(agency.country)}}</span>
-                    <p class="grey-text">
-                        <span v-bind:class="'chip white-text '+colorState(agency.state)">{{getState(agency.state)}}</span>
-                    </p>
-                    <div class="secondary-content btn-flat waves-effect" v-on:click="clickAgency(index)"><i class="material-icons grey-text tooltipped" data-position="top" data-delay="5" data-tooltip="Ver Detalles de la Reserva">more_vert</i></div>
-                </a>
+              <a v-bind:href="'#/agency/'+agency.nit" class="collection-item avatar transparent no-border waves-effect">
+                <i class="circle blue-dark-gradient white-text">{{agency.agency.substring(0, 1)}}</i>
+                <b class="black-text text-trasnform">{{limitText(agency.agency)}}</b>
+                <p class="grey-text"> {{getCountry(agency.country)}}</p>
+                <p class="grey-text">
+                  <span v-bind:class="'chip white-text '+colorState(agency.state)">{{getState(agency.state)}}</span>
+                </p>
+              </a>
             </div>
           </div>
         </div>

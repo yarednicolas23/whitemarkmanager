@@ -86,7 +86,7 @@ new Vue({
     validateSesion: function () {
       this.session.user = JSON.parse(this.$cookie.get('user'))
       if (this.session.user!=null) {
-        if (this.$route.path=="/login") {
+        if (this.$route.path=="/") {
           if (this.session.user.fRol == 5) {
             router.push('myagencydesign')
             return

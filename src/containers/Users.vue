@@ -1,12 +1,12 @@
 <template>
-  <div class="row blue-grey darken-4">
+  <div class="row">
       <SideBar/>
-      <nav class="col s12 m12 l10 right blue-grey darken-3">
+      <nav class="col s12 m12 l10 right white">
         <div class="nav-wrapper">
           <form>
             <div class="input-field">
               <input id="search" type="search" v-model="search" required>
-              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <label class="label-icon" for="search"><i class="material-icons grey-text">search</i></label>
               <i class="material-icons">close</i>
             </div>
           </form>
@@ -31,12 +31,11 @@
           <div class="collection no-border" v-if="users.list.length>1">
             <div class="col s12 m6 l6 " :key="index" v-for="(user,index) in filteredList ">
                 <a v-bind:href="'#/user/'+user.document" class="collection-item avatar transparent no-border waves-effect">
-                    <i class="circle blue-dark-gradient white-text material-icons tooltipped mobile-no-show" data-position="top" data-delay="5" data-tooltip="">mood</i>
-                    <span class="title white-text text-trasnform">{{limitText(user.name+' '+user.fName)}}</span>
-                    <p class="grey-text">
-                        <span v-bind:class="getRol(user.fRol).color">{{getRol(user.fRol).name}}</span> - {{getCountry(user.city)}} <br>
-                    </p>
-                    <div class="secondary-content btn-flat waves-effect" v-on:click="clickUser(index)"><i class="material-icons grey-text tooltipped" data-position="top" data-delay="5" data-tooltip="Ver Detalles de la Reserva">more_vert</i></div>
+                  <i class="circle blue-dark-gradient white-text material-icons tooltipped mobile-no-show" data-position="top" data-delay="5" data-tooltip="">mood</i>
+                  <p class="black-text text-trasnform">{{limitText(user.name+' '+user.fName)}}</p>
+                  <p class="grey-text">
+                      <span v-bind:class="getRol(user.fRol).color">{{getRol(user.fRol).name}}</span> - {{getCountry(user.city)}} <br>
+                  </p>
                 </a>
             </div>
           </div>
@@ -88,9 +87,9 @@ export default{
         case "4":
           return {"color":"cyan-text","name":"Auditor"}
         case "5":
-          return {"color":"green-text text-accent-2","name":"Agencia"}
+          return {"color":"pink-text","name":"Agencia"}
         default:
-        return {"color":"green-text text-accent-2","name":"Agencia"}
+        return {"color":"pink-text","name":"Agencia"}
       }
     },
     getUsersList: function() {

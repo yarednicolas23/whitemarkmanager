@@ -40,7 +40,6 @@
         </div>
         <div class="parallax"><img src="./../assets/img/background-admin.jpg"></div>
       </div>
-      <div class="col s12 no-padding blue-grey darken-4 full-screen"></div>
     </div>
   </div>
 </template>

@@ -1,277 +1,262 @@
 <template>
   <div class="home">
     <div class="col s12 no-padding">
-      <div class="parallax-container full-screen">
+      <div class="row">
+        <nav class="transparent no-box-shadow">
+          <div class="nav-wrapper container">
+            <a href="#/" class="brand-logo">
+              <img src="https://www.aviatur.com/version/908/assets/aviatur_assets/img/header/aviatur-logo-gradient.svg?v=2" class="responsive-img" alt="">
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a class="grey-text" href="#">Inicio</a></li>
+              <li><a class="grey-text" href="#how">¿Como Funciona?</a></li>
+              <li><a class="grey-text" href="#moreinfo">¿Que debo hacer?</a></li>
+              <li><a class="grey-text" href="#register">Registrarme</a></li>
+              <li><button class="btn btn-border  modal-trigger" href="#login">Inciar Sesión</button></li>
+            </ul>
+          </div>
+        </nav>
         <div class="row">
-          <nav class="transparent no-box-shadow">
-            <div class="nav-wrapper container ">
-              <a href="#/" class="brand-logo center">
-                <img src="http://www.aviatur.com/version/478/assets/aviatur_assets/img/header/aviatur_logo_beach.svg" class="responsive-img" alt="">
-              </a>
-            </div>
-          </nav>
-          <div class="row">
-             <div class="col s12">
-               <ul id="tabs" class="tabs transparent">
-                 <li class="tab col s12 m3 l3"><a href="#init" class="active">Inicio</a></li>
-                 <li class="tab col s12 m3 l3"><a href="#how">¿Como funciona?</a></li>
-                 <li class="tab col s12 m3 l3"><a href="#moreinfo">¿Que debo hacer?</a></li>
-                 <li class="tab col s12 m3 l3"><a href="#register">Registrarse</a></li>
-               </ul>
-             </div>
-             <div id="init" class="col s12">
-               <div class="row mono center" style="margin-top:10%">
-                 <h2 class="header white-text thin">¿Tienes una agencia de viajes?</h2>
-                 <p class="white-text">
-                   En AVIATUR Ofrecemos a las agencias de viajes que esta en proceso de desarrollo,
-                   <br>
-                   la posibilidad de obtener su propio buscador en linea,
-                   <br>
-                   una herramienta de ventas personalizable de marca blanca,
-                   <br>
-                   en donde hacemos accesible para su agencia la forma de integrarte con AVIATUR,
-                   <br>
-                   nosotros nos encargamos del funcionamiento tecnológico
-                   <br>
-                   para que su agencia solo se preocupe por seguir creciendo.
-                 </p>
-                 <router-link to="/login" class="btn btn-border ">Inciar Sesión</router-link>
-                 <a class="btn btn-circle" v-on:click="selectTab('how')">Dar el primer paso</a>
-               </div>
-             </div>
-             <section id="how" class="col s12 white-text">
-                 <div class="section container">
-                   <div class="row mono">
-                     <div class="col s12 center">
-                       <i class="material-icons"><h1>mood</h1></i>
-                       <h4>¿Como funciona?</h4>
-                       <h6 class="container center light">
-                         Nos gusta incluir a todos, sabemos que muchas agencias pequeñas emergentes o medianas,
-                         compran por aviatur.com, y gestionan con sus clientes,
-                         <br>
-                         <br>
-                         Ahora queremos premiar a nuestros mejores consolidadores de ventas, incluyendolos en la empresa,
-                         de forma que tengan un espacio donde puedan comprar, llevar control de sus ventas, y más importante aún,
-                         comisionar por su nivel de ventas.
-                       </h6>
-                     </div>
-                   </div>
-                   <div class="row mono center">
-                     <div class="col s12 m4">
-                       <div class="icon-block center">
-                         <h2><i class="material-icons" style="font-size:4rem;">flight</i></h2>
-                         <h5>Vuelos</h5>
-                         <p class="light">
-                           En su pagina de marca blanca tendra acceso al modulo de ventas de tiquetes nacionales e internacionales
-                           con comision de 1% compartida con AVIATUR, si la aerolinea genera hover por metas de ventas tambíen
-                           serán compartidas en comisión.
-                         </p>
-                       </div>
-                     </div>
-                     <div class="col s12 m4">
-                       <div class="icon-block center">
-                         <h2><i class="material-icons" style="font-size:4rem;">hotel</i></h2>
-                         <h5>Hoteles</h5>
-                         <p class="light">
-                           Este modulo contien hoteles nacionales e internacionales
-                           con comision aproximada del 14% compartida con AVIATUR,
-                           todas las negociaciones de hoteles que AVIATUR tenga directamente,
-                           serán compartidas también con la agencias.
-                         </p>
-                       </div>
-                     </div>
-                     <div class="col s12 m4">
-                       <div class="icon-block center">
-                         <h2><i class="material-icons" style="font-size:4rem;">card_travel</i></h2>
-                         <h5>Paquetes</h5>
-                         <p class="light">
-                           AVIATUR tiene paquetes nacionales e internacionales
-                           con comision aproximada del 15%, las negociaciones de paquetes
-                           que AVIATUR tenga directamente, serán compartidas también
-                           con la agencias sugeto a excepciones.
-                         </p>
-                       </div>
-                     </div>
-                     <div class="col s12 center">
-                       <i class="material-icons"><h1>brush</h1></i>
-                       <h4>Edite su pagina web</h4>
-                       <h6 class="container center light">
-                         Una vez su cuenta sea confirmada podrá editar el diseño
-                         de su marca blanca en nuestra herramienta, iniciando sesión
-                         y utilizando la herramienta "Diseño de mi web"
-                       </h6>
-                       <br>
-                       <img src="./../assets/img/steps/web-editor.png" class="responsive-img" alt="marca blanca aviatur">
-                     </div>
-
-                     <div class="col s12 white-text">
-                       <i class="material-icons"><h1>build</h1></i>
-                       <h4>Herramientas de edición</h4>
-                       <table>
-                         <thead>
-                           <tr>
-                             <th>Icono</th>
-                             <th>Uso</th>
-                             <th>Descripción</th>
-                           </tr>
-                         </thead>
-                         <tbody>
-                           <tr>
-                             <td><i class="material-icons">photo_size_select_large</i></td>
-                             <td>Editar icono</td>
-                             <td>Le permite subir el icono de su empresa</td>
-                           </tr>
-                           <tr>
-                             <td><i class="white-text material-icons tooltipped center">burst_mode</i></td>
-                             <td>Editar color</td>
-                             <td>Elija la paleta de colores</td>
-                           </tr>
-                           <tr>
-                             <td><i class="white-text material-icons tooltipped center">visibility</i></td>
-                             <td>Editar botones</td>
-                             <td>Seleccione los botones según el servicio que preste</td>
-                           </tr>
-                           <tr>
-                             <td><i class="white-text material-icons tooltipped center">format_shapes</i></td>
-                             <td>Editar información</td>
-                             <td>Edite la información visible de su empresa</td>
-                           </tr>
-                           <tr>
-                             <td><i class="material-icons">collections</i></td>
-                             <td>Editar imagen de fondo</td>
-                             <td>Tendra una paleta de imagenes disponible para usar de fondo en su pagina</td>
-                           </tr>
-                           <tr>
-                             <td><i class="white-text material-icons tooltipped center">save</i></td>
-                             <td>Guardar</td>
-                             <td>Guarda el trabajo realizado</td>
-                           </tr>
-                         </tbody>
-                       </table>
-                     </div>
-                     <div class="col s12">
-                       <a class="btn btn-circle" v-on:click="selectTab('moreinfo')">Continuar</a>
-                     </div>
-                   </div>
-                 </div>
-             </section>
-             <section id="moreinfo" class="white-text">
-               <div class="row center">
-                 <div class="section container mono">
-                   <div class="col s12 m4">
-                     <div class="icon-block center">
-                       <h2><i class="material-icons" style="font-size:4rem;">looks_one</i></h2>
-                       <h5>Primer paso</h5>
-                       <p class="light">
-                         Registrese dando click en el botón
-                       </p>
-                       <a class="btn btn-circle" v-on:click="selectTab('register')">Registro</a>
-                     </div>
-                   </div>
-                   <div class="col s12 m4">
-                     <div class="icon-block center">
-                       <h2><i class="material-icons" style="font-size:4rem;">looks_two</i></h2>
-                       <h5>Segundo paso</h5>
-                       <p class="light">
-                           Al correo con el que se registre llegara un correo
-                           en el cual deberá confirmar su cuenta.
-                       </p>
-                     </div>
-                   </div>
-                   <div class="col s12 m4">
-                     <div class="icon-block center">
-                       <h2><i class="material-icons" style="font-size:4rem;">looks_3</i></h2>
-                       <h5>Tercer paso</h5>
-                       <p class="light">
-                         Al correo con el que se registre llegara un correo
-                         en el cual deberá confirmar su cuenta y asignar una contraseña de acceso.
-                       </p>
-                     </div>
-                   </div>
-                   <div class="col s12">
-                     <div class="icon-block center">
-                       <h2><i class="material-icons" style="font-size:4rem;">looks_4</i></h2>
-                       <h5>Cuarto paso</h5>
-                       <p class="light">
-                         Una vez confirmada su cuenta, tendra acceso a la plataforma,
-                         puede iniciar sesión dando click <a href="#login">aquí</a> ,
-                         y podra ingresar a la herramienta "Diseño de mi web"
-                         donde puede editar el diseño de su web.
-                       </p>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </section>
-             <div id="register" class="container">
-               <div class="row white-text">
-                 <form id="form-register" class="" v-on:submit.prevent="register">
-                   <div class="input-field col s12">
-                     <i class="material-icons prefix">email</i>
-                     <input name="mail" id="mail" type="email" class="validate" required="" v-model="agency.mail">
-                     <label for="mail">Email</label>
-                     <span class="helper-text" data-error="Tu correo no es validos 😕" data-success="Tu correo esta perfecto 😃"></span>
-                   </div>
-                   <div class="input-field col s12">
-                     <i class="material-icons prefix">location_city</i>
-                     <input name="nit" id="nit" type="text" pattern="[0-9]{8,11}" class="validate" required="" v-model="agency.nit">
-                     <label for="nit">Nit de la empresa</label>
-                     <span class="helper-text" data-error="Tu Nit no es valido 😕" data-success="Tu Nit esta perfecto 😃"></span>
-                   </div>
-                   <div class="input-field col s12">
-                     <i class="material-icons prefix">account_circle</i>
-                     <input name="name" id="name" type="text" class="validate" required="" v-model="agency.agency">
-                     <label for="name">Nombre de la empresa</label>
-                     <span class="helper-text" data-error="Tu nombre no es valido 😕" data-success="Que buen nombre 😃"></span>
-                   </div>
-                   <div class="input-field col s12">
-                     <i class="material-icons prefix">fingerprint</i>
-                     <input name="document" id="document" type="text" pattern="[0-9]{8,11}" class="validate" required="" v-model="user.document">
-                     <label for="document">Tu Cedula</label>
-                     <span class="helper-text" data-error="Tu Cedula no es valido 😕" data-success="Tu Cedula esta perfecto 😃"></span>
-                   </div>
-                   <div class="input-field col s12">
-                     <i class="material-icons prefix">mood</i>
-                     <input name="username" id="username" type="text" class="validate" required="" v-model="user.name">
-                     <label for="username">Tu Nombre</label>
-                     <span class="helper-text" data-error="Tu nombre no es valido 😕" data-success="Que buen nombre 😃"></span>
-                   </div>
-                   <div class="col s12">
-                   <label>Ciudad</label>
-                   <select name="city" id="city" class="browser-default black-text" v-model="agency.country" required>
-                     <option value="" disabled selected>Selecciona tu ciudad</option>
-                     <option v-bind:value="index" v-bind:key="index" v-for="(city,index) in cities.list">{{city}}</option>
-                   </select>
-                   </div>
-                   <div class="center hide">
-                     <h5>Realiza esta sencilla suma, para verificar que no eres un robot.</h5>
-                   </div>
-                   <div class="input-field col s12 row center">
-                     <input class="hide" type="submit" value="Send">
-                     <button class="btn btn-circle" type="submit" name="action" v-show="!loader.register">
-                       <i class="material-icons right">send</i>
-                       Registrar
-                     </button>
-                     <div class="preloader-wrapper active" v-show="loader.register">
-                        <div class="spinner-layer spinner-blue-only">
-                          <div class="circle-clipper left">
-                            <div class="circle"></div>
-                          </div><div class="gap-patch">
-                            <div class="circle"></div>
-                          </div><div class="circle-clipper right">
-                            <div class="circle"></div>
-                          </div>
-                        </div>
-                      </div>
-                   </div>
-                 </form>
-               </div>
+           <div id="init" class="row">
+             <div class="container" style="margin-top:8%">
+               <h3 class="header"><b>¿Tienes una agencia de viajes?</b></h3>
+               <p class="grey-text">
+                 En AVIATUR Ofrecemos a las agencias de viajes que esta en proceso de desarrollo,
+                 <br>
+                 la posibilidad de obtener su propio buscador en linea,
+                 <br>
+                 una herramienta de ventas personalizable de marca blanca,
+                 <br>
+                 en donde hacemos accesible para su agencia la forma de integrarte con AVIATUR,
+                 <br>
+                 nosotros nos encargamos del funcionamiento tecnológico
+                 <br>
+                 para que su agencia solo se preocupe por seguir creciendo.
+               </p>
+               <a class="btn btn-circle" v-on:click="selectTab('how')">Dar el primer paso</a>
              </div>
            </div>
-        </div>
-        <div class="parallax">
-          <img src="./../assets/img/background.jpg" style="max-width:100%">
-        </div>
+           <br><br><br><br><br><br><br><br><br><br>
+           <section id="how" class="row">
+             <div class="container">
+               <div class="row">
+                 <div class="col s12 m6 l8">
+                   <i class="material-icons hide"><h1>mood</h1></i>
+                   <h4><b>¿Como funciona?</b></h4>
+                   <p>
+                     Sabemos que muchas agencias pequeñas emergentes o medianas,
+                     compran por aviatur.com, y gestionan con sus clientes.
+                     <br>
+                     Ahora queremos premiar a nuestros mejores consolidadores de ventas, incluyendolos en la empresa,
+                     de forma que tengan un espacio donde puedan comprar, llevar control de sus ventas, y más importante aún,
+                     comisionar por su nivel de ventas.
+                   </p>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="col s12">
+                   <i class="col s1 center material-icons" style="line-height:2;font-size:2rem;">flight</i>
+                   <p class="col s10">
+                     El servicio de vuelos y ventas de tiquetes nacionales e internacionales
+                     con comision de 1% compartida con AVIATUR, si la aerolinea genera hover por metas de ventas tambíen
+                     serán compartidas en comisión.
+                   </p>
+                 </div>
+                 <div class="col s12">
+                   <i class="col s1 center material-icons" style="line-height:2;font-size:2rem;">hotel</i>
+                   <p class="col s10">
+                     El servicio de hoteles nacionales e internacionales
+                     con comision aproximada del 14% compartida con AVIATUR,
+                     todas las negociaciones de hoteles que AVIATUR tenga directamente,
+                     serán compartidas también con la agencias.
+                   </p>
+                 </div>
+                 <div class="col s12">
+                   <i class="col s1 center material-icons" style="line-height:2;font-size:2rem;">card_travel</i>
+                   <p class="col s10">
+                     El servicio de  paquetes nacionales e internacionales
+                     con comision aproximada del 15%, las negociaciones de paquetes
+                     que AVIATUR tenga directamente, serán compartidas también
+                     con la agencias sugeto a excepciones.
+                   </p>
+                 </div>
+               </div>
+               <br><br><br><br><br><br><br><br><br><br>
+               <div class="row">
+                 <div class="col s12 m6 l4">
+                   <i class="material-icons hide"><h1>brush</h1></i>
+                   <h4>Edite su pagina web</h4>
+                   <p>
+                     Una vez su cuenta sea confirmada podrá editar el diseño
+                     de su marca blanca en nuestra herramienta, iniciando sesión
+                     y utilizando la herramienta "Diseño de mi web"
+                   </p>
+                 </div>
+                 <div class="col s12 m6 l8 no-padding">
+                   <img src="./../assets/img/steps/web-editor.png" class="responsive-img" alt="marca blanca aviatur">
+                 </div>
+               </div>
+               <div class="row">
+                  <div class="col s12">
+                    <i class="material-icons hide"><h1>build</h1></i>
+                    <h4>Herramientas de edición</h4>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Icono</th>
+                          <th>Uso</th>
+                          <th>Descripción</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><i class="material-icons">photo_size_select_large</i></td>
+                          <td>Editar icono</td>
+                          <td>Le permite subir el icono de su empresa</td>
+                        </tr>
+                        <tr>
+                          <td><i class="material-icons tooltipped center">burst_mode</i></td>
+                          <td>Editar color</td>
+                          <td>Elija la paleta de colores</td>
+                        </tr>
+                        <tr>
+                          <td><i class="material-icons tooltipped center">visibility</i></td>
+                          <td>Editar botones</td>
+                          <td>Seleccione los botones según el servicio que preste</td>
+                        </tr>
+                        <tr>
+                          <td><i class="material-icons tooltipped center">format_shapes</i></td>
+                          <td>Editar información</td>
+                          <td>Edite la información visible de su empresa</td>
+                        </tr>
+                        <tr>
+                          <td><i class="material-icons">collections</i></td>
+                          <td>Editar imagen de fondo</td>
+                          <td>Tendra una paleta de imagenes disponible para usar de fondo en su pagina</td>
+                        </tr>
+                        <tr>
+                          <td><i class="material-icons tooltipped center">save</i></td>
+                          <td>Guardar</td>
+                          <td>Guarda el trabajo realizado</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+               </div>
+               <br><br><br><br><br><br><br><br><br><br>
+             </div>
+           </section>
+           <section id="moreinfo" class="row">
+             <div class="container">
+               <div class="row">
+                 <div class="col s12 m6 l8">
+                   <h4><b>¿Que debo hacer?</b></h4>
+                   <p>Siga los pasos.</p>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="col s12">
+                   <i class="col s1 center material-icons" style="line-height:1.8;font-size:2rem;">looks_one</i>
+                   <p class="col s10">
+                     El primer paso es registrarse dando click en <a v-on:click="selectTab('register')">Registro</a>
+                   </p>
+                 </div>
+                 <div class="col s12">
+                   <i class="col s1 center material-icons" style="line-height:1.8;font-size:2rem;">looks_two</i>
+                   <p class="col s10">
+                     Para el segundo paso al correo con el que se registre llegara un email en el cual deberá confirmar su cuenta.
+                   </p>
+                 </div>
+                 <div class="col s12">
+                   <i class="col s1 center material-icons" style="line-height:1.8;font-size:2rem;">looks_3</i>
+                   <p class="col s10">
+                     Al correo con el que se registre llegara un correo
+                     en el cual deberá confirmar su cuenta y asignar una contraseña de acceso.
+                   </p>
+                 </div>
+                 <div class="col s12">
+                   <i class="col s1 center material-icons" style="line-height:1.8;font-size:2rem;">looks_4</i>
+                   <p class="col s10">
+                     Una vez confirmada su cuenta, tendra acceso a la plataforma,
+                     puede iniciar sesión dando click <a href="#login">aquí</a> ,
+                     y podra ingresar a la herramienta "Diseño de mi web"
+                     donde puede editar el diseño de su web.
+                   </p>
+                 </div>
+               </div>
+             </div>
+             <br><br><br><br><br><br><br><br><br><br>
+           </section>
+           <div id="register" class="container">
+             <div class="row">
+               <div class="col s12 m6 l8">
+                 <h4><b>Registro</b></h4>
+               </div>
+             </div>
+             <div class="row">
+               <form id="form-register" class="" v-on:submit.prevent="register">
+                 <div class="input-field col s12">
+                   <i class="material-icons prefix">email</i>
+                   <input name="mail" id="mail" type="email" class="validate" required="" v-model="agency.mail">
+                   <label for="mail">Email</label>
+                   <span class="helper-text" data-error="Tu correo no es valido 😕" data-success="ok"></span>
+                 </div>
+                 <div class="input-field col s12">
+                   <i class="material-icons prefix">location_city</i>
+                   <input name="nit" id="nit" type="text" pattern="[0-9]{8,11}" class="validate" required="" v-model="agency.nit">
+                   <label for="nit">Nit de la empresa</label>
+                   <span class="helper-text" data-error="Tu Nit no es valido 😕" data-success="Tu Nit esta perfecto 😃"></span>
+                 </div>
+                 <div class="input-field col s12">
+                   <i class="material-icons prefix">account_circle</i>
+                   <input name="name" id="name" type="text" class="validate" required="" v-model="agency.agency">
+                   <label for="name">Nombre de la empresa</label>
+                   <span class="helper-text" data-error="Tu nombre no es valido 😕" data-success="Que buen nombre 😃"></span>
+                 </div>
+                 <div class="input-field col s12">
+                   <i class="material-icons prefix">fingerprint</i>
+                   <input name="document" id="document" type="text" pattern="[0-9]{8,11}" class="validate" required="" v-model="user.document">
+                   <label for="document">Tu Cedula</label>
+                   <span class="helper-text" data-error="Tu Cedula no es valido 😕" data-success="Tu Cedula esta perfecto 😃"></span>
+                 </div>
+                 <div class="input-field col s12">
+                   <i class="material-icons prefix">mood</i>
+                   <input name="username" id="username" type="text" class="validate" required="" v-model="user.name">
+                   <label for="username">Tu Nombre</label>
+                   <span class="helper-text" data-error="Tu nombre no es valido 😕" data-success="Que buen nombre 😃"></span>
+                 </div>
+                 <div class="col s12">
+                 <label>Ciudad</label>
+                 <select name="city" id="city" class="browser-default black-text" v-model="agency.country" required>
+                   <option value="" disabled selected>Selecciona tu ciudad</option>
+                   <option v-bind:value="index" v-bind:key="index" v-for="(city,index) in cities.list">{{city}}</option>
+                 </select>
+                 </div>
+                 <div class="center hide">
+                   <h5>Realiza esta sencilla suma, para verificar que no eres un robot.</h5>
+                 </div>
+                 <div class="input-field col s12 row center">
+                   <input class="hide" type="submit" value="Send">
+                   <button class="btn btn-circle" type="submit" name="action" v-show="!loader.register">
+                     <i class="material-icons right">send</i>
+                     Registrar
+                   </button>
+                   <div class="preloader-wrapper active" v-show="loader.register">
+                      <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left">
+                          <div class="circle"></div>
+                        </div><div class="gap-patch">
+                          <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                          <div class="circle"></div>
+                        </div>
+                      </div>
+                    </div>
+                 </div>
+               </form>
+             </div>
+           </div>
+         </div>
       </div>
       <!-- Modal Success -->
       <div id="success" class="modal modal-success">
@@ -283,6 +268,12 @@
           <a class="modal-close waves-effect waves-green btn-flat">ok</a>
         </div>
       </div>
+      <!-- Modal Login -->
+      <div id="login" class="modal modal-success">
+        <div class="modal-content">
+          <Login/>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -290,8 +281,10 @@
 <script>
 import M from 'materialize-css'
 import * as firebase from "firebase/app"
+import Login from '../containers/Login'
 export default {
   name: 'Home',
+  components:{Login},
   data:function(){
     return {
       "agency":{},

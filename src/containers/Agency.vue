@@ -313,7 +313,7 @@
   }
 </style>
 <template>
-  <div class="row blue-grey darken-4 full-screen">
+  <div class="row full-screen">
       <SideBar/>
       <div class="col s12 m12 l10 no-padding right">
         <!-- Loader -->
@@ -331,7 +331,7 @@
           </div>
           <h5 class="white-text light">Cargando...</h5>
         </div>
-        <div class="col s12 mono center white-text" v-if="agency == 0">
+        <div class="col s12 mono center" v-if="agency == 0">
           <h1>😱</h1>
           <h3 class="thin">No encontramos esta agencia, es probable que no exista</h3>
         </div>
@@ -353,7 +353,7 @@
                <div class="container">
                   <div class="col s12">
                     <div>
-                      <div class="white-text">
+                      <div>
                         <h4><b>{{agency.agency}}</b></h4>
                         <div class="row">
                           <div class="col s12 m12 l2">
@@ -361,7 +361,7 @@
                               <div class="image_wrapper" style="margin-left:0">
                                 <div class="file-field input-field">
                                   <form id="uploadLogo" enctype="multipart/form-data">
-                                    <div class="circle center" v-bind:class="img.color" style="padding:5px 0" v-if="img.src==''">
+                                    <div class="circle center white-text" v-bind:class="img.color" style="padding:5px 0" v-if="img.src==''">
                                       <h3 class="light">{{this.letter}}</h3>
                                     </div>
                                     <img class="image"  v-show="img.src!=''" :src="img.src" v-on:error="ImgError" alt="Imagen perfil Aviatur Marcas Blancas">
@@ -377,28 +377,28 @@
                           <div class="col s12 m12 l10">
                             <div class="input-field">
                               <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Nombre de la Agencia">account_circle</i>
-                              <input name="agency" type="text" class="white-text" v-model="agency.agency" >
+                              <input name="agency" type="text" v-model="agency.agency" >
                               <label for="agency">Nombre de la Agencia</label>
                             </div>
                             <div class="input-field">
                               <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Correo de la Agencia">mail</i>
-                              <input name="mail" type="text" class="white-text" v-model="agency.mail">
+                              <input name="mail" type="text" v-model="agency.mail">
                               <label for="mail">Correo de la Agencia</label>
                             </div>
                             <div class="input-field">
                               <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Pagina web de la Agencia">web</i>
-                              <input name="web" type="text" class="white-text" v-model="agency.web">
+                              <input name="web" type="text" v-model="agency.web">
                               <label for="web">URL</label>
                             </div>
                             <div class="input-field">
                               <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Movil de la Agencia">phone_iphone</i>
-                              <input name="movil" type="number" class="white-text" v-model="agency.phone">
+                              <input name="movil" type="number" v-model="agency.phone">
                               <label for="icon_prefix">Movil de la Agencia</label>
                             </div>
                             <div class="input-field">
                               <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Estado de la Agencia">info_outline</i>
                               <div class="col s12" style="padding-left: 40px;">
-                                <select class="browser-default blue-grey darken-4 white-text  " v-bind:value="agency.state" v-model.number="agency.state">
+                                <select class="browser-default grey lighten-2" v-bind:value="agency.state" v-model.number="agency.state">
                                   <option value="" disabled selected>Estado de la Agencia</option>
                                   <option value="0">Online</option>
                                   <option value="1">Inicial</option>

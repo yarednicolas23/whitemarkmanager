@@ -1,10 +1,10 @@
 <template>
-  <div class="row blue-grey darken-4">
+  <div class="row">
       <SideBar></SideBar>
       <div class="col s12 m12 l10 right">
         <!-- Tasa de crecimiento de ventas funtion incrementIndicator() -->
         <div id="increment" class="col s12 m12 l6 hide">
-          <div class="card gradient-blue white-text">
+          <div class="card  gradient-blue white-text">
             <div class="card-content">
               <div class="row">
                 <div class="col s12 m6 l6 no-padding">
@@ -48,26 +48,16 @@
           </div>
         </div>
         <div id="totals" class="col s12">
-          <div class="card gradient-dashboard white-text">
-            <div class="card-content">
-              <span class="card-title">Total ventas por año</span>
-              <div class="row">
-                <div class="col s12 l6">
-                </div>
-              </div>
-              <canvas id="chart-commission-all"></canvas>
-            </div>
+          <div class="float-card gradient-dashboard white-text">
+            <h5 class="card-title">Total ventas por año</h5>
+            <canvas id="chart-commission-all"></canvas>
           </div>
         </div>
 
         <div class="col s12 ">
-          <div class="card gradient-dashboard white-text">
-            <div class="card-content">
-              <span class="card-title">Total ventas por marca</span>
-              <div class="chart-commission-month">
-                <canvas id="chart-commission-month"></canvas>
-              </div>
-            </div>
+          <div class="float-card  gradient-dashboard white-text">
+            <h5 class="card-title">Total ventas por marca</h5>
+            <canvas id="chart-commission-month"></canvas>
           </div>
         </div>
       </div>
