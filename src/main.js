@@ -31,6 +31,10 @@ Vue.use(VueCookie)
 
 const routes = [
   { path: '/',name:'Home', component:Home },
+  { path: '/how',name:'Home', component:Home },
+  { path: '/moreinfo',name:'Home', component:Home },
+  { path: '/register',name:'Home', component:Home },
+
   { path: '/login', component:Login },
   { path: '/users', component:Users },
   { path: '/user/:id', component:User },
@@ -114,7 +118,7 @@ new Vue({
           router.push('')
         }
         else {
-          router.push('/login')
+          router.push('/')
         }
       }
     },

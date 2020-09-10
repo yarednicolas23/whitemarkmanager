@@ -1,23 +1,22 @@
 <template>
-  <div class="parallax-container full-screen">
     <div class="row">
       <nav class="transparent no-box-shadow">
         <div class="nav-wrapper container ">
           <a href="#" class="brand-logo center">
-            <img src="http://www.aviatur.com/version/478/assets/aviatur_assets/img/header/aviatur_logo_beach.svg" class="responsive-img" alt="">
+            <img src="https://www.aviatur.com/version/908/assets/aviatur_assets/img/header/aviatur-logo-gradient.svg?v=2" class="responsive-img" alt="">
           </a>
         </div>
       </nav>
 
       <div class="col s12">
         <div class="container" v-show="!loader">
-          <h5 class="white-text thin center">
+          <h5 class="center">
             {{user.name}} tu agencia {{agency.agency}}, casi esta lista,
             ya casi haces parte de AVIATUR,
             solo debes confirmar los siguientes datos:
           </h5>
           <div id="register" class="col s12">
-              <div class="row white-text">
+              <div class="row">
                 <form class="" v-on:submit.prevent="register">
                   <div class="input-field col s12 tooltipped" data-position="top" data-delay="5" data-tooltip="Registro Nacional de Turismo (RNT)">
                     <i class="material-icons prefix">domain</i>
@@ -57,7 +56,7 @@
                     </select>
                   </div>-->
                   <div class="col s12">
-                    <h5 class="white-text thin">Ingresa una contraseña segura para tu agencia.</h5>
+                    <h5>Ingresa una contraseña segura para tu agencia.</h5>
                   </div>
                   <div class="input-field col s12">
                     <i class="material-icons prefix">lock</i>
@@ -82,7 +81,7 @@
         </div>
         <div class="col s12 center" v-show="loader">
           <div class="preloader-wrapper big active">
-            <div class="spinner-layer spinner-white-only">
+            <div class="spinner-layer spinner-blue-only">
               <div class="circle-clipper left">
                 <div class="circle"></div>
               </div><div class="gap-patch">
@@ -92,14 +91,10 @@
               </div>
             </div>
           </div>
-          <h5 class="light white-text">Cargando...</h5>
+          <h5>Cargando...</h5>
         </div>
       </div>
     </div>
-    <div class="parallax">
-      <img src="./../assets/img/background.jpg" style="max-width:100%">
-    </div>
-  </div>
 </template>
 
 <script>

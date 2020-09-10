@@ -12,7 +12,7 @@
               <li><a class="grey-text" href="#how">¿Como Funciona?</a></li>
               <li><a class="grey-text" href="#moreinfo">¿Que debo hacer?</a></li>
               <li><a class="grey-text" href="#register">Registrarme</a></li>
-              <li><button class="btn btn-border  modal-trigger" href="#login">Inciar Sesión</button></li>
+              <li><button class="btn btn-circle  modal-trigger" href="#login">Inciar Sesión</button></li>
             </ul>
           </div>
         </nav>
@@ -33,7 +33,7 @@
                  <br>
                  para que su agencia solo se preocupe por seguir creciendo.
                </p>
-               <a class="btn btn-circle" v-on:click="selectTab('how')">Dar el primer paso</a>
+               <a class="btn btn-circle" href="#how">Dar el primer paso</a>
              </div>
            </div>
            <br><br><br><br><br><br><br><br><br><br>
@@ -85,7 +85,7 @@
                <div class="row">
                  <div class="col s12 m6 l4">
                    <i class="material-icons hide"><h1>brush</h1></i>
-                   <h4>Edite su pagina web</h4>
+                   <h4><b>Edite su pagina web</b></h4>
                    <p>
                      Una vez su cuenta sea confirmada podrá editar el diseño
                      de su marca blanca en nuestra herramienta, iniciando sesión
@@ -93,13 +93,13 @@
                    </p>
                  </div>
                  <div class="col s12 m6 l8 no-padding">
-                   <img src="./../assets/img/steps/web-editor.png" class="responsive-img" alt="marca blanca aviatur">
+                   <img src="./../assets/img/steps/editor.png" class="responsive-img z-depth-5" alt="marca blanca aviatur">
                  </div>
                </div>
                <div class="row">
                   <div class="col s12">
                     <i class="material-icons hide"><h1>build</h1></i>
-                    <h4>Herramientas de edición</h4>
+                    <h4><b>Herramientas de edición</b></h4>
                     <table>
                       <thead>
                         <tr>

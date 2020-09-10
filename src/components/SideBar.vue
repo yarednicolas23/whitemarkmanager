@@ -75,23 +75,23 @@
             </div>
             <img class="circle responsive-img image" v-show="img.src!=''" :src="img.src" v-on:error="ImgError" style="max-height:100px;max-width:100px" alt="Imagen perfil Aviatur Marcas Blancas">
           </form>
-          <p><span class="name text-trasnform center">{{this.user.name}} {{this.user.fName}}</span></p>
-          <p><span class="email center">{{this.user.mail}}</span></p>
+          <span class="name text-trasnform center">{{this.user.name}} {{this.user.fName}}</span>
+          <span class="email center">{{this.user.mail}}</span>
         </div>
       </li>
-        <li v-if="nav.analitycs"><router-link class="grey-text waves-effect waves-light" to="/admin"><i class="grey-text material-icons">home</i>Home</router-link></li>
-        <li v-if="nav.myagency" class="disabled"><router-link class="grey-text waves-effect waves-light" to="/myagency"><i class="grey-text material-icons">home</i>Mi Agencia</router-link></li>
-        <li v-if="nav.myagencydesign"><router-link class="grey-text waves-effect waves-light" to="/myagencydesign"><i class="grey-text material-icons">format_shapes</i>Diseño de mi Web</router-link></li>
-        <li v-if="nav.reports" class="hide disabled"><router-link class="grey-text waves-effect waves-light" to="/reports"><i class="grey-text material-icons">monetization_on</i>Reportes de Ventas</router-link></li>
-        <li v-if="nav.transactions" class="disabled"><router-link class="grey-text waves-effect waves-light" to="/transactions"><i class="grey-text material-icons">compare_arrows</i>Transacciones</router-link></li>
-        <li v-if="nav.agencies"><router-link class="grey-text waves-effect waves-light" to="/agencies"><i class="grey-text material-icons">business_center</i>Agencias</router-link></li>
-        <li v-if="nav.users"><router-link class="grey-text waves-effect waves-light" to="/users"><i class="grey-text material-icons">group</i>Usuarios</router-link></li>
+        <li v-if="nav.analitycs"><router-link class="grey-text waves-effect" to="/admin"><i class="grey-text material-icons">home</i>Home</router-link></li>
+        <li v-if="nav.myagency" class="disabled"><router-link class="grey-text waves-effect" to="/myagency"><i class="grey-text material-icons">home</i>Mi Agencia</router-link></li>
+        <li v-if="nav.myagencydesign"><router-link class="grey-text waves-effect" to="/myagencydesign"><i class="grey-text material-icons">format_shapes</i>Diseño de mi Web</router-link></li>
+        <li v-if="nav.reports" class="hide disabled"><router-link class="grey-text waves-effect" to="/reports"><i class="grey-text material-icons">monetization_on</i>Reportes de Ventas</router-link></li>
+        <li v-if="nav.transactions" class="disabled"><router-link class="grey-text waves-effect" to="/transactions"><i class="grey-text material-icons">compare_arrows</i>Transacciones</router-link></li>
+        <li v-if="nav.agencies"><router-link class="grey-text waves-effect" to="/agencies"><i class="grey-text material-icons">business_center</i>Agencias</router-link></li>
+        <li v-if="nav.users"><router-link class="grey-text waves-effect" to="/users"><i class="grey-text material-icons">group</i>Usuarios</router-link></li>
 
-      <li><router-link class="grey-text waves-effect waves-light" to="/info"><i class="grey-text material-icons">find_in_page</i>Información +</router-link></li>
-      <li><router-link class="grey-text waves-effect waves-light hide" to="/notifications"><i class="grey-text material-icons">notifications</i>Notificaciones</router-link></li>
-      <li><router-link class="grey-text waves-effect waves-light hide" to="/faq"><i class="grey-text material-icons">help</i>FAQ</router-link></li>
-      <li><router-link class="grey-text waves-effect waves-light" to="/profile"><i class="grey-text material-icons">mood</i>Mi Perfil</router-link></li>
-      <li><a v-on:click="$root.closeSession()" class="grey-text waves-effect waves-light"><i class="grey-text material-icons">exit_to_app</i>Cerrar Sesion</a></li>
+      <li><router-link class="grey-text waves-effect" to="/info"><i class="grey-text material-icons">find_in_page</i>Información +</router-link></li>
+      <li><router-link class="grey-text waves-effect hide" to="/notifications"><i class="grey-text material-icons">notifications</i>Notificaciones</router-link></li>
+      <li><router-link class="grey-text waves-effect hide" to="/faq"><i class="grey-text material-icons">help</i>FAQ</router-link></li>
+      <li><router-link class="grey-text waves-effect" to="/profile"><i class="grey-text material-icons">mood</i>Mi Perfil</router-link></li>
+      <li><a v-on:click="$root.closeSession()" class="grey-text waves-effect"><i class="grey-text material-icons">exit_to_app</i>Cerrar Sesion</a></li>
     </ul>
     <nav class="col s12 m12 l10 right white hide" v-if="!navTop">
       <div class="nav-wrapper">

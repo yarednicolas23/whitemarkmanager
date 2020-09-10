@@ -116,7 +116,7 @@
       padding: 1em 0 4em;
       list-style: none;
       color: black;
-      text-align: center;
+      text-align: left;
       font-family: Verdana, sans-serif;
   }
   .grid {
@@ -254,75 +254,59 @@
   }
 </style>
 <template>
-  <div class="row blue-grey darken-4 full-screen">
+  <div class="row full-screen">
     <SideBar nav-top/>
-    <nav class="col s12 m12 l10 right no-padding blue-grey darken-3">
+    <nav class="col s12 m12 l10 right no-padding white">
       <div class="nav-wrapper">
-        <ul class="row"> <!--right hide-on-med-and-down -->
-          <li class="waves-effect waves-light col s2">
-            <a class="modal-trigger pointer" data-target="image">
-              <i
-                class="white-text material-icons tooltipped center"
-                data-position="bottom"
-                data-delay="10"
-                data-tooltip="Cambiar Logo"
-                style="margin-left: 20px;">photo_size_select_large</i>
-            </a>
+        <ul class="row">
+          <li class="col s2 center">
+            <a class="btn-floating btn-flat  indigo lighten-4 waves-effect waves-light modal-trigger tooltipped"
+            data-target="image"
+            data-position="bottom"
+            data-delay="10"
+            data-tooltip="Cambiar Logo"><i class="material-icons indigo-text">photo_size_select_large</i></a>
           </li>
-          <li class="waves-effect waves-light col s2">
-            <a class="modal-trigger pointer" data-target="favicon">
-              <i
-                class="white-text material-icons tooltipped center"
-                data-position="bottom"
-                data-delay="10"
-                data-tooltip="Cambiar Favicon">burst_mode</i>
-            </a>
+          <li class="col s2 hide">
+            <a class="btn-floating btn-flat blue lighten-4 waves-effect waves-light modal-trigger center tooltipped"
+            data-position="bottom"
+            data-delay="10"
+            data-tooltip="Cambiar Favicon"
+            data-target="favicon"><i class="material-icons">burst_mode</i></a>
           </li>
-          <li class="waves-effect waves-light col s2">
-            <a class="modal-trigger pointer tooltipped center"
-                data-position="bottom"
-                data-delay="10"
-                data-tooltip="Cambiar Color Base"
-                data-target="color">
-              <i class="white-text material-icons">format_color_fill</i>
-            </a>
+          <li class="col s2 center">
+            <a class="btn-floating btn-flat blue lighten-4 waves-effect waves-light modal-trigger tooltipped"
+            data-position="bottom"
+            data-delay="10"
+            data-tooltip="Cambiar Color Base"
+            data-target="color"><i class="material-icons blue-text">format_color_fill</i></a>
           </li>
-          <li class="waves-effect waves-light col s2">
-            <a id="menu" class="modal-trigger pointer tooltipped center"
-                data-position="bottom"
-                data-delay="10"
-                data-tooltip="Botones Visibles"
-                data-target="buttons">
-              <i class="white-text material-icons">visibility</i>
-            </a>
+          <li class="col s2 center">
+            <a id="menu" class="btn-floating btn-flat cyan lighten-4 waves-effect waves-light modal-trigger tooltipped"
+            data-position="bottom"
+            data-delay="10"
+            data-tooltip="Botones Visibles"
+            data-target="buttons"><i class="material-icons cyan-text">visibility</i></a>
           </li>
-          <li class="waves-effect waves-light col s2" v-show="false">
-            <a class="modal-trigger pointer tooltipped center"
-                data-position="bottom"
-                data-delay="10"
-                data-tooltip="Información Visible"
-                data-target="info">
-              <i class="white-text material-icons">format_shapes</i>
-            </a>
+          <li class="col s2 center" v-show="false">
+            <a class="btn-floating btn-flat pink lighten-4 waves-effect waves-light modal-trigger tooltipped"
+            data-position="bottom"
+            data-delay="10"
+            data-tooltip="Información Visible"
+            data-target="info"><i class="material-icons">format_shapes</i></a>
           </li>
-          <!--Background-->
-          <li class="waves-effect waves-light col s2">
-            <a class="modal-trigger pointer tooltipped center"
-                data-position="bottom"
-                data-delay="10"
-                data-tooltip="Cambiar Fondo"
-                data-target="background">
-              <i class="white-text material-icons">collections</i>
-            </a>
+          <li class="col s2 center">
+            <a class="btn-floating btn-flat pink lighten-4 waves-effect waves-light modal-trigger tooltipped"
+            data-position="bottom"
+            data-delay="10"
+            data-tooltip="Cambiar Fondo"
+            data-target="background"><i class="material-icons pink-text">collections</i></a>
           </li>
-          <li class="waves-effect  blue-grey lighten-1 waves-light col s2">
-            <a class="modal-trigger pointer tooltipped center"
-                data-position="bottom"
-                data-delay="10"
-                data-tooltip="Guardar Cambios"
-                v-on:click="SaveChange(agency)">
-              <i class="white-text material-icons">save</i>
-            </a>
+          <li class="col s2 center">
+            <a class="btn-floating btn-flat green accent-2 waves-effect waves-light modal-trigger tooltipped"
+            data-position="bottom"
+            data-delay="10"
+            data-tooltip="Guardar Cambios"
+            v-on:click="SaveChanges()"><i class="material-icons green-text">save</i></a>
           </li>
         </ul>
       </div>
@@ -385,9 +369,9 @@
       </li>
     </ul>
     <!-- Modal Logo -->
-    <div id="image" class="modal bottom-sheet blue-grey darken-4">
+    <div id="image" class="modal bottom-sheet">
       <div class="modal-content">
-        <h4 class="white-text">Logo de la agencia</h4>
+        <h4>Logo de la agencia</h4>
         <div class="row">
           <div class="col s12 image_wrapper">
             <div class="file-field input-field">
@@ -400,13 +384,13 @@
         </div>
         <!-- Logo -->
       </div>
-      <div class="modal-footer blue-grey darken-4">
-        <a class="modal-action modal-close white-text waves-effect waves-red btn-flat">Cerrar</a>
+      <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
       </div>
     </div>
-    <div id="favicon" class="modal bottom-sheet blue-grey darken-4">
+    <div id="favicon" class="modal bottom-sheet">
       <div class="modal-content">
-        <h4 class="white-text">Favicon de la agencia</h4>
+        <h4>Favicon de la agencia</h4>
         <div class="row">
           <div class="col s12 image_wrapper">
             <div class="file-field input-field">
@@ -419,14 +403,14 @@
         </div>
         <!-- Logo -->
       </div>
-      <div class="modal-footer blue-grey darken-4">
-        <a class="modal-action modal-close white-text waves-effect waves-red btn-flat">Cerrar</a>
+      <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
       </div>
     </div>
     <!-- Modal Background -->
-    <div id="background" class="modal bottom-sheet blue-grey darken-4">
+    <div id="background" class="modal bottom-sheet">
       <div class="modal-content">
-        <h4 class="white-text">Fondo de pagina</h4>
+        <h4>Fondo de pagina</h4>
           <div class="col s12">
             <div class="col s4" :key="index" v-for="(img,index) in imgs">
               <div class="card">
@@ -444,9 +428,9 @@
                 </div>
             </div>
           </div>
-          <div class="col s12 modal-footer blue-grey darken-4">
-            <a class="modal-action modal-close white-text waves-effect waves-red btn-flat bottom right">Cerrar</a>
-            <a class="modal-action modal-close blue-grey darken-2 white-text waves-effect waves-red btn"
+          <div class="col s12 modal-footer">
+            <a class="modal-action modal-close waves-effect waves-red btn-flat bottom right">Cerrar</a>
+            <a class="modal-action modal-close blue-grey darken-2 waves-effect waves-red btn"
               v-on:click="SaveChange(agency)">
               <i class="left material-icons">save</i>Guardar Cambios
             </a>
@@ -454,13 +438,13 @@
       </div>
     </div>
     <!-- Modal Color -->
-    <div id="color" class="modal bottom-sheet blue-grey darken-4">
+    <div id="color" class="modal bottom-sheet">
       <div class="modal-content">
-        <h4 class="white-text">Editar Color de mi Agencia</h4>
+        <h4>Editar Color de mi Agencia</h4>
         <div class="row">
           <!-- Color -->
           <div class="color" :class="index" :key="index" v-for="(color,index) in colors" v-on:click="changeColor(color)"></div>
-          <div class="col s12 input-field white-text">
+          <div class="col s12 input-field">
             <input id="text" type="text" class="col s3" v-model="agency.page.color">
             <input id="colorinput" type="color" class="col s3" v-model="agency.page.color">
             <label>Color Seleccionado:</label>
@@ -472,21 +456,21 @@
 
         <!-- Logo -->
       </div>
-      <div class="modal-footer blue-grey darken-4">
-        <a class="modal-action modal-close white-text waves-effect waves-red btn blue-grey darken-2"
+      <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-red btn blue-grey darken-2"
         v-on:click="SaveChange(agency)">
           <i class="left material-icons">save</i>Guardar Cambios
         </a>
-        <a class="modal-action modal-close white-text waves-effect waves-red btn-flat">Cerrar</a>
+        <a class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
       </div>
     </div>
     <!-- Modal Buttons -->
-    <div id="buttons" class="modal bottom-sheet blue-grey darken-4">
+    <div id="buttons" class="modal bottom-sheet">
       <div class="modal-content">
-        <h4 class="white-text">Escoje los servicios que quieres en tu agencia:</h4>
+        <h4>Escoje los servicios que quieres en tu agencia:</h4>
         <div class="row">
             <div class="switch">
-            <table class="white-text">
+            <table>
               <thead>
                 <tr>
                     <th>Icono</th>
@@ -496,7 +480,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><img src="./../assets/img/icons/flight.svg" alt="" class="responsive-img"/></td>
+                  <td><img src="./../assets/img/icons/blue/flight.svg" style="width:100px" class="responsive-img"/></td>
                   <td>Vuelos</td>
                   <td>
                     <label>
@@ -506,7 +490,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><img src="./../assets/img/icons/hotel.svg" alt="" class="responsive-img"/></td>
+                  <td><img src="./../assets/img/icons/blue/hotel.svg" style="width:100px" class="responsive-img"/></td>
                   <td>Hoteles</td>
                   <td>
                     <label>
@@ -516,7 +500,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><img src="./../assets/img/icons/cars.svg" alt="" class="responsive-img"/></td>
+                  <td><img src="./../assets/img/icons/blue/cars.svg" style="width:100px" class="responsive-img"/></td>
                   <td>Autos</td>
                   <td>
                     <label>
@@ -526,7 +510,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><img src="./../assets/img/icons/flight+hotel.svg" alt="" class="responsive-img"/></td>
+                  <td><img src="./../assets/img/icons/blue/flight+hotel.svg" style="width:100px" class="responsive-img"/></td>
                   <td>Vuelos+Hoteles</td>
                   <td>
                     <label>
@@ -536,7 +520,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><img src="./../assets/img/icons/packages.svg" alt="" class="responsive-img"/></td>
+                  <td><img src="./../assets/img/icons/blue/packages.svg" style="width:100px" class="responsive-img"/></td>
                   <td>Paquetes</td>
                   <td>
                     <label>
@@ -546,7 +530,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><img src="./../assets/img/icons/bus.svg" alt="" class="responsive-img" style ="max-width: 150px;"/></td>
+                  <td><img src="./../assets/img/icons/blue/bus.svg" class="responsive-img" style ="max-width:100px;"/></td>
                   <td>Buses</td>
                   <td>
                     <label>
@@ -556,7 +540,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><img src="./../assets/img/icons/cruisers.svg" alt="" class="responsive-img"/></td>
+                  <td><img src="./../assets/img/icons/blue/cruise.svg" style="width:100px" class="responsive-img"/></td>
                   <td>Cruceros</td>
                   <td>
                     <label>
@@ -566,7 +550,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><img src="./../assets/img/icons/assistance.svg" alt="" class="responsive-img"/></td>
+                  <td><img src="./../assets/img/icons/blue/insurance.svg" style="width:100px" class="responsive-img"/></td>
                   <td>Asistencia</td>
                   <td>
                     <label>
@@ -580,16 +564,16 @@
           </div>
         </div>
       </div>
-      <div class="modal-footer blue-grey darken-4">
-        <a class="modal-action modal-close white-text waves-effect waves-red btn blue-grey darken-2"
+      <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect green btn"
         v-on:click="SaveChange(agency)">
           <i class="left material-icons">save</i>Guardar Cambios
         </a>
-        <a class="modal-action modal-close white-text waves-effect waves-red btn-flat">Cerrar</a>
+        <a class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
       </div>
     </div>
     <!-- Modal Info -->
-    <div id="info" class="modal bottom-sheet blue-grey darken-4">
+    <div id="info" class="modal bottom-sheet">
       <div class="modal-content">
         <h4 class="white-text">Editar Información Visible de mi Agencia</h4>
         <div class="row">
@@ -637,7 +621,7 @@
       </div>
     </div>
     <!-- Modal instructions -->
-    <div id="instructions" class="modal bottom-sheet blue-grey darken-4">
+    <div id="instructions" class="modal bottom-sheet">
       <div class="modal-content">
         <h4 class="white-text">Aquí podras crear y editar tu pagina web 🔧</h4>
         <div class="row">
@@ -710,7 +694,7 @@
       <div class="col s12 m12">
         <div class="chrome">
           <div class="tabs-chrome">
-            <div class="tab-1 tab selt" style="background:#4385f5">
+            <div class="tab-1 tab selt" style="background:#757575">
               <p>{{agency.agency}}</p>
               <span class="close">x</span>
             </div>

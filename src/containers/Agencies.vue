@@ -32,10 +32,10 @@
             <div class="col s12 " v-bind:key="index" v-for="(agency,index) in onlineList">
                 <a v-bind:href="'#/agency/'+agency.nit" class="collection-item avatar transparent no-border waves-effect">
                   <i class="circle blue-dark-gradient">{{agency.agency.substring(0, 1)}}</i>
-                  <b class="black-text text-trasnform">{{limitText(agency.agency)}}</b>
-                  <p class="grey-text"> {{getCountry(agency.country)}}</p>
+                  <p class="black-text text-trasnform">{{limitText(agency.agency)}}</p>
+                  <p class="grey-text">{{getCountry(agency.country)}}</p>
                   <p class="grey-text">
-                      <span v-bind:class="'chip white-text '+colorState(agency.state)">{{getState(agency.state)}}</span>
+                    <span v-bind:class="'chip white-text '+colorState(agency.state)">{{getState(agency.state)}}</span>
                   </p>
                 </a>
             </div>
@@ -44,8 +44,8 @@
             <div class="col s12 " v-bind:key="index" v-for="(agency,index) in initialList">
                 <a v-bind:href="'#/agency/'+agency.nit" class="collection-item avatar transparent no-border waves-effect">
                   <i class="circle blue-dark-gradient white-text">{{agency.agency.substring(0, 1)}}</i>
-                  <b class="black-text text-trasnform">{{limitText(agency.agency)}}</b>
-                  <p class="grey-text"> {{getCountry(agency.country)}}</p>
+                  <p class="black-text text-trasnform">{{limitText(agency.agency)}}</p>
+                  <p class="grey-text">{{getCountry(agency.country)}}</p>
                   <p class="grey-text">
                       <span v-bind:class="'chip white-text '+colorState(agency.state)">{{getState(agency.state)}}</span>
                   </p>
@@ -56,8 +56,8 @@
             <div class="col s12" v-bind:key="index" v-for="(agency,index) in offlineList">
               <a v-bind:href="'#/agency/'+agency.nit" class="collection-item avatar transparent no-border waves-effect">
                 <i class="circle blue-dark-gradient white-text">{{agency.agency.substring(0, 1)}}</i>
-                <b class="black-text text-trasnform">{{limitText(agency.agency)}}</b>
-                <p class="grey-text"> {{getCountry(agency.country)}}</p>
+                <p class="black-text text-trasnform">{{limitText(agency.agency)}}</p>
+                <p class="grey-text">{{getCountry(agency.country)}}</p>
                 <p class="grey-text">
                   <span v-bind:class="'chip white-text '+colorState(agency.state)">{{getState(agency.state)}}</span>
                 </p>

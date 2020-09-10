@@ -179,7 +179,6 @@
       list-style: none;
       color: black;
       text-align: center;
-      font-family: Verdana, sans-serif;
   }
   .grid {
       width: 25%;
@@ -345,7 +344,7 @@
                  <li class="tab"><a href="#info">Detalles de la agencia</a></li>
                  <li class="tab"><a href="#details">Detalles Tecnicos</a></li>
                  <!--<li class="tab hide"><a href="#atached">Adjuntos</a></li>-->
-                 <li class="tab"><a href="#reports">Reportes</a></li>
+                 <!--<li class="tab h"><a href="#reports">Reportes</a></li>-->
                  <li class="tab"><a href="#web">Diseño web</a></li>
                </ul>
              </div>
@@ -429,7 +428,7 @@
                <div class="container">
                   <div class="col s12">
                     <div>
-                      <div class="white-text">
+                      <div>
                         <h4><b>{{agency.agency}}</b></h4>
                         <div class="row">
                           <div class="col s12 info">
@@ -438,7 +437,7 @@
                                 <td class="">
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="NIT">fingerprint</i>
-                                    <input class="white-text" readonly="readonly" name="nit" type="text" v-model="agency.nit">
+                                    <input readonly="readonly" name="nit" type="text" v-model="agency.nit">
                                     <label for="icon_prefix">NIT</label>
                                   </div>
                                 </td>
@@ -447,7 +446,7 @@
                                 <td>
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="RNT">beenhere</i>
-                                    <input class="white-text" readonly="readonly" name="rnt" type="text"  v-model="agency.rnt">
+                                    <input readonly="readonly" name="rnt" type="text"  v-model="agency.rnt">
                                     <label for="icon_prefix">RNT</label>
                                   </div>
                                 </td>
@@ -456,7 +455,7 @@
                                 <td>
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Representante legal">gavel</i>
-                                    <input class="white-text" name="legal" type="text" v-model="agency.legal"/>
+                                    <input name="legal" type="text" v-model="agency.legal"/>
                                     <label for="icon_prefix">Representante legal</label>
                                   </div>
                                 </td>
@@ -465,7 +464,7 @@
                                 <td>
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Fecha de Registro">date_range</i>
-                                    <input class="white-text" name="date" type="text" v-model="agency.date">
+                                    <input name="date" type="text" v-model="agency.date">
                                     <label for="icon_prefix">Fecha de Registro</label>
                                   </div>
                                 </td>
@@ -474,7 +473,7 @@
                                 <td>
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Cuidad de la Agencia">location_on</i>
-                                    <input class="white-text" name="" readonly="readonly" type="text" v-model="agency.country">
+                                    <input name="" readonly="readonly" type="text" v-model="agency.country">
                                     <label for="icon_prefix">Cuidad de la Agencia</label>
                                   </div>
                                 </td>
@@ -483,7 +482,7 @@
                                 <td>
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Dirreción de la Agencia">my_location</i>
-                                    <input class="white-text" name="location" type="text" v-model="agency.location">
+                                    <input name="location" type="text" v-model="agency.location">
                                     <label for="icon_prefix">Dirreción de la Agencia</label>
                                   </div>
                                 </td>
@@ -500,7 +499,7 @@
                <div class="container">
                   <div class="col s12">
                     <div>
-                      <div class="white-text">
+                      <div>
                         <h4><b>{{agency.agency}}</b></h4>
                         <div class="row">
                           <div class="col s12 info">
@@ -509,7 +508,7 @@
                                 <td class="">
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Referer">vpn_key</i>
-                                    <input class="white-text" name="referer" type="text" v-model="agency.referer">
+                                    <input name="referer" type="text" v-model="agency.referer">
                                     <label for="referer">Referer</label>
                                   </div>
                                 </td>
@@ -518,7 +517,7 @@
                                 <td class="">
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Centro de Costos">attach_money</i>
-                                    <input class="white-text" name="costcenter" type="text" v-model="agency.costcenter">
+                                    <input name="costcenter" type="text" v-model="agency.costcenter">
                                     <label for="costcenter">Centro de Costos</label>
                                   </div>
                                 </td>
@@ -527,7 +526,7 @@
                                 <td>
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Fecha de Registro">date_range</i>
-                                    <input class="white-text" name="date" type="text" v-model="agency.dateend">
+                                    <input name="date" type="text" v-model="agency.dateend">
                                     <label for="icon_prefix">Fecha de Entrega</label>
                                   </div>
                                 </td>
@@ -536,7 +535,7 @@
                                 <td>
                                   <div class="input-field col s12">
                                     <i class="material-icons prefix tooltipped" data-position="left" data-delay="50" data-tooltip="Comercial de la Negociación">person_pin</i>
-                                    <input class="white-text" name="comercial" type="text" v-model="agency.comercial"/>
+                                    <input name="comercial" type="text" v-model="agency.comercial"/>
                                     <label for="comercial">Comercial de la Negociación</label>
                                   </div>
                                 </td>
@@ -687,7 +686,7 @@
                   </div>
                 </div>
              </div>-->
-             <div id="reports" class="col s12">
+             <!--<div id="reports" class="col s12">
                <div class="container">
                   <div class="white-text" style="margin-top: 25px">
                       <div class="row">
@@ -795,58 +794,58 @@
                    </div>
                  </div>
                </div>
-             </div>
+             </div>-->
              <div id="web" class="col s12" v-if="agency.agency!=null">
                <div class="col s12">
                  <ul class="row">
-                   <li class="col s2">
-                     <a class="btn-flat waves-effect waves-light modal-trigger col s12 center tooltipped"
+                   <li class="col s2 center">
+                     <a class="btn-floating btn-flat  indigo lighten-4 waves-effect waves-light modal-trigger tooltipped"
                      data-target="image"
                      data-position="bottom"
                      data-delay="10"
-                     data-tooltip="Cambiar Logo"><i class="white-text material-icons">photo_size_select_large</i></a>
+                     data-tooltip="Cambiar Logo"><i class="material-icons indigo-text">photo_size_select_large</i></a>
                    </li>
                    <li class="col s2 hide">
-                     <a class="btn-flat waves-effect waves-light modal-trigger col s12 center tooltipped"
+                     <a class="btn-floating btn-flat blue lighten-4 waves-effect waves-light modal-trigger center tooltipped"
                      data-position="bottom"
                      data-delay="10"
                      data-tooltip="Cambiar Favicon"
-                     data-target="favicon"><i class="white-text material-icons">burst_mode</i></a>
+                     data-target="favicon"><i class="material-icons">burst_mode</i></a>
                    </li>
-                   <li class="col s2">
-                     <a class="btn-flat waves-effect waves-light modal-trigger col s12 center tooltipped"
+                   <li class="col s2 center">
+                     <a class="btn-floating btn-flat blue lighten-4 waves-effect waves-light modal-trigger tooltipped"
                      data-position="bottom"
                      data-delay="10"
                      data-tooltip="Cambiar Color Base"
-                     data-target="color"><i class="white-text material-icons">format_color_fill</i></a>
+                     data-target="color"><i class="material-icons blue-text">format_color_fill</i></a>
                    </li>
-                   <li class="col s2">
-                     <a id="menu" class="btn-flat waves-effect waves-light modal-trigger col s12 center tooltipped"
+                   <li class="col s2 center">
+                     <a id="menu" class="btn-floating btn-flat cyan lighten-4 waves-effect waves-light modal-trigger tooltipped"
                      data-position="bottom"
                      data-delay="10"
                      data-tooltip="Botones Visibles"
-                     data-target="buttons"><i class="white-text material-icons">visibility</i></a>
+                     data-target="buttons"><i class="material-icons cyan-text">visibility</i></a>
                    </li>
-                   <li class="col s2" v-show="false">
-                     <a class="btn-flat waves-effect waves-light modal-trigger col s12 center tooltipped"
+                   <li class="col s2 center" v-show="false">
+                     <a class="btn-floating btn-flat pink lighten-4 waves-effect waves-light modal-trigger tooltipped"
                      data-position="bottom"
                      data-delay="10"
                      data-tooltip="Información Visible"
-                     data-target="info"><i class="white-text material-icons">format_shapes</i></a>
+                     data-target="info"><i class="material-icons">format_shapes</i></a>
                    </li>
-                   <li class="col s2">
-                     <a class="btn-flat waves-effect waves-light modal-trigger col s12 center tooltipped"
+                   <li class="col s2 center">
+                     <a class="btn-floating btn-flat pink lighten-4 waves-effect waves-light modal-trigger tooltipped"
                      data-position="bottom"
                      data-delay="10"
                      data-tooltip="Cambiar Fondo"
-                     data-target="background"><i class="white-text material-icons">collections</i></a>
+                     data-target="background"><i class="material-icons pink-text">collections</i></a>
                    </li>
-                   <li class="col s2">
-                     <a class="btn-flat blue-grey lighten-1 waves-effect waves-light modal-trigger col s12 center tooltipped"
+                   <li class="col s2 center">
+                     <a class="btn-floating btn-flat green accent-2 waves-effect waves-light modal-trigger tooltipped"
                      data-position="bottom"
                      data-delay="10"
                      data-tooltip="Guardar Cambios"
-                     v-on:click="SaveChanges()"><i class="white-text material-icons">save</i></a>
+                     v-on:click="SaveChanges()"><i class="material-icons green-text">save</i></a>
                    </li>
                  </ul>
                </div>
@@ -857,7 +856,7 @@
                  <div class="col s12 m12">
                    <div class="chrome">
                      <div class="tabs-chrome">
-                       <div class="tab-1 tab selt" style="background:#4385f5">
+                       <div class="tab-1 tab selt" style="background:#757575">
                          <p>{{agency.agency}}</p>
                          <span class="close">x</span>
                        </div>
@@ -884,7 +883,7 @@
                        <div class="row">
                          <div class="col s12 container-background" style="box-shadow: -10px -10px 10px 10px #aaaaaa;" v-bind:style="'background-image:url(https://whitemark.grupoaviatur.com/assets/whitemark_assets/img/header/_covers/'+agency.page.background+'.jpg)'">
                            <div class="wrapper" v-bind:class="agency.page.background=='no-image'?'':'black-trasnparent'" style="padding-bottom:20px;">
-                             <div class="col s12 no-padding" v-bind:style="'color:'+agency.page.color + ';' ">
+                             <div class="col s12 no-padding" v-bind:class="agency.page.background=='no-image'?'':' white-text'">
                                <div class="col">
                                  <p><b>Dirección: </b> {{agency.location}}</p>
                                </div>
@@ -933,7 +932,7 @@
                                <div class="col navbutton" v-if="agency.page.button.cruisers">
                                  <div class="btn-seacher"  v-bind:style="'background-color:'+agency.page.color + ';' ">
                                    <img class="responsive-img" src="./../assets/img/icons/cruisers.svg" alt="">
-                                   Cruseros
+                                   Cruceros
                                  </div>
                                </div>
                                <div class="col navbutton" v-if="agency.page.button.assistance">
@@ -1433,7 +1432,7 @@ export default {
             //this.getSales(this.agency)
             this.getImg(this.agency.referer)
             this.getYearsToCharts()
-            this.getCharts()
+            //this.getCharts()
             this.getLetter()
             if (this.agency.date == null) {
               this.agency.date = new Date()
@@ -1567,14 +1566,15 @@ export default {
       }
       console.log(JSON.stringify(d));
       var data = JSON.stringify({});
-      var url = 'https://qa.aviatur.com/api/whitemark/new';
+      var url = 'https://qa.aviatur.com/api/whitemark/create';
 
       fetch(url, {
         method: 'POST', // or 'PUT'
         body: data, // data can be `string` or {object}!
         headers:{
           'authorization':"Bearer "+this.bearer,
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept':'application/json'
         }
       }).then(res => res.json())
       .catch(error => console.error('Error:', error))
