@@ -1105,23 +1105,30 @@
         </div>
       </div>
       <!-- Modal Logo -->
-      <div id="image" class="modal bottom-sheet blue-grey darken-4" v-if="agency.agency!=null">
+      <div id="image" class="modal bottom-sheet" v-if="agency.agency!=null">
         <div class="modal-content">
-          <h4 class="white-text">Logo de la agencia</h4>
+          <h4>Logo de la agencia</h4>
           <div class="row">
             <div class="col s12 image_wrapper">
-              <div class="file-field input-field">
-                <form id="uploadLogo" enctype="multipart/form-data">
-                  <img class="responsive-img" style="" :src="agency.referer!=null?'https://whitemanager.grupoaviatur.com/dir/marks/'+agency.referer+'/'+agency.referer+'.png?'+upload.time+'':''"  alt="Imagen perfil Aviatur Marcas Blancas">
-                  <span class="add"><a class="btn-floating blue waves-effect waves-light"><i class="large material-icons">edit</i><input type="file" v-on:change="uploadLogo($event)"></a></span><br><br>
-                </form>
-              </div>
+              <img class="responsive-img" style="" :src="agency.referer!=null?'https://whitemanager.grupoaviatur.com/dir/marks/'+agency.referer+'/'+agency.referer+'.png?'+upload.time+'':''"  alt="Imagen perfil Aviatur Marcas Blancas">
+              <form id="uploadLogo" enctype="multipart/form-data">
+                <div class="file-field input-field">
+                  <div class="btn indigo lighten-4 indigo-text">
+                    <i class="material-icons right">cloud_upload</i>
+                      Subir imagen
+                    <input type="file" v-on:change="uploadLogo($event)">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
           <!-- Logo -->
         </div>
-        <div class="modal-footer blue-grey darken-4">
-          <a class="modal-action modal-close white-text waves-effect waves-red btn-flat">Cerrar</a>
+        <div class="modal-footer">
+          <a class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
         </div>
       </div>
       <!-- Modal Color -->

@@ -623,9 +623,9 @@
     <!-- Modal instructions -->
     <div id="instructions" class="modal bottom-sheet">
       <div class="modal-content">
-        <h4 class="white-text">Aquí podras crear y editar tu pagina web 🔧</h4>
+        <h4>Aquí podras crear y editar tu pagina web 🔧</h4>
         <div class="row">
-          <div class="col s12 white-text">
+          <div class="col s12">
             <table>
               <thead>
                 <tr>
@@ -636,27 +636,27 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><i class="white-text material-icons tooltipped center">photo_size_select_large</i></td>
+                  <td><i class="material-icons tooltipped center">photo_size_select_large</i></td>
                   <td>Editar icono</td>
                   <td>Te permite subir el icono de tu empresa</td>
                 </tr>
-                <tr>
-                  <td><i class="white-text material-icons tooltipped center">burst_mode</i></td>
+                <tr class="hide">
+                  <td><i class="material-icons tooltipped center">burst_mode</i></td>
                   <td>Editar Favicon</td>
                   <td>Te permite subir el Favicon (pequeña imagen utilizada para identificar el sitio web) de tu empresa</td>
                 </tr>
                 <tr>
-                  <td><i class="white-text material-icons tooltipped center">format_color_fill</i></td>
+                  <td><i class="material-icons tooltipped center">format_color_fill</i></td>
                   <td>Editar color</td>
                   <td>Elige la paleta de colores</td>
                 </tr>
                 <tr>
-                  <td><i class="white-text material-icons tooltipped center">visibility</i></td>
+                  <td><i class="material-icons tooltipped center">visibility</i></td>
                   <td>Editar botones</td>
                   <td>Selecciona los botones según el servicio que prestes</td>
                 </tr>
-                <tr>
-                  <td><i class="white-text material-icons tooltipped center">format_shapes</i></td>
+                <tr class="hide">
+                  <td><i class="material-icons tooltipped center">format_shapes</i></td>
                   <td>Editar información</td>
                   <td>Edita la información de tu empresa</td>
                 </tr>
@@ -666,7 +666,7 @@
                   <td>Tendra una paleta de imagenes disponible para usar de fondo en su pagina</td>
                 </tr>
                 <tr>
-                  <td><i class="white-text material-icons tooltipped center">save</i></td>
+                  <td><i class="material-icons tooltipped center">save</i></td>
                   <td>Guardar</td>
                   <td>Guarda el trabajo realizado</td>
                 </tr>
@@ -770,7 +770,7 @@
                     <div class="col navbutton" v-if="agency.page.button.cruisers">
                       <div class="btn-seacher"  v-bind:style="'background-color:'+agency.page.color + ';' ">
                         <img class="responsive-img" src="./../assets/img/icons/cruisers.svg" alt="">
-                        Cruseros
+                        Cruceros
                       </div>
                     </div>
                     <div class="col navbutton" v-if="agency.page.button.assistance">

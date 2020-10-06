@@ -80,7 +80,7 @@
         </div>
       </li>
         <li v-if="nav.analitycs"><router-link class="grey-text waves-effect" to="/admin"><i class="grey-text material-icons">home</i>Home</router-link></li>
-        <li v-if="nav.myagency" class="disabled"><router-link class="grey-text waves-effect" to="/myagency"><i class="grey-text material-icons">home</i>Mi Agencia</router-link></li>
+        <li v-if="nav.myagency" class="hide"><router-link class="grey-text waves-effect" to="/myagency"><i class="grey-text material-icons">home</i>Mi Agencia</router-link></li>
         <li v-if="nav.myagencydesign"><router-link class="grey-text waves-effect" to="/myagencydesign"><i class="grey-text material-icons">format_shapes</i>Diseño de mi Web</router-link></li>
         <li v-if="nav.reports" class="hide disabled"><router-link class="grey-text waves-effect" to="/reports"><i class="grey-text material-icons">monetization_on</i>Reportes de Ventas</router-link></li>
         <li v-if="nav.transactions" class="disabled"><router-link class="grey-text waves-effect" to="/transactions"><i class="grey-text material-icons">compare_arrows</i>Transacciones</router-link></li>
