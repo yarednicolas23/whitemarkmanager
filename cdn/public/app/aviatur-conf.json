@@ -1,0 +1,274 @@
+{
+  "officeid":"BOG2357",
+  "scripts":"appInit()",
+  "date":"2020-07-13-98-11",
+  "sections":[
+    {
+      "visible":true,
+      "text":{
+        "title":"Encuentre más de 500 opciones",
+        "subtitle":"Y prepárese para viajar"
+      },
+      "list":[]
+    },
+    {
+      "visible":true,
+      "text":{
+        "title":"Ofertas en vuelos",
+        "subtitle":"Aproveche las ofertas ahora y viaje después"
+      },
+      "list":[]
+    },
+    {
+      "visible":true,
+      "text":{
+        "title":"Planee su viaje desde ya",
+        "subtitle":"Y recorra los mejores destinos"
+      },
+      "list":[]
+    },
+    {
+      "visible":true,
+      "text":{
+        "title":"Viva experiencias memorables",
+        "subtitle":"Encuentre las mejores actividades en su destino"
+      },
+      "list":[]
+    },
+    {
+      "visible":true,
+      "text":{
+        "title":"Experiencias de lujo",
+        "subtitle":"Unico en Colombia"
+      },
+      "list":[
+        {
+          "url":"/paquetes/personalizada/las-islas",
+          "img":"https://static.aviatur.com/images/Large_Colombia_Baru_Hotel_las_islas_36_19062018103112.jpg",
+          "location":"Barú, Colombia",
+          "name":"Hotel Las Islas 2020",
+          "price":500000,
+          "text":"Ver más"
+        },
+        {
+          "url":"/paquetes/personalizada/casa-navegante",
+          "img":"https://static.aviatur.com/images/Large_CASA%20NAVEGANTE%20CHOLON_19122014163404.jpg",
+          "location":"Barú, Colombia",
+          "name":"Casa Navegante 2020",
+          "price":4571500,
+          "text":"Ver más"
+        }
+      ]
+    },
+    {
+      "visible":false,
+      "text":{
+        "title":"Las mejores tarifas en ",
+        "subtitle":"Aerolíneas"
+      },
+      "list":[
+        {
+          "code":"AV",
+          "color":"#de0108",
+          "url":"https://www.aviatur.com/vuelos/tiquetes-baratos-con-avianca",
+          "img":"",
+          "script":"document.getElementsByClassName('search__light')[0].classList.add('hide');",
+          "name":"Avianca"
+        },
+        {
+          "code":"LA",
+          "color":"#1b0088",
+          "url":"https://www.aviatur.com/vuelos/tiquetes-baratos-con-latam-airlines",
+          "img":"",
+          "script":"document.getElementsByClassName('search__light')[0].classList.add('hide');",
+          "name":"LATAM"
+        },
+        {
+          "code":"VH",
+          "color":"#ffffff",
+          "url":"https://www.aviatur.com/vuelos/tiquetes-baratos-con-vivaair",
+          "img":"",
+          "script":"document.getElementsByClassName('search__light')[0].classList.add('hide');",
+          "name":"Viva Air"
+        }
+      ]
+    },
+    {
+      "visible":false,
+      "text":{
+        "title":"Colombia",
+        "subtitle":"Conozca cada una de las ciudades de "
+      },
+      "list":[
+        {
+          "code":"CTG",
+          "color":"#1b0088",
+          "url":"https://www.aviatur.com/vuelos/tiquetes-baratos-a-cartagena",
+          "img":"https://www.aviatur.com/source/destinos/ciudad-vieja-cartagena.jpg ",
+          "script":"document.getElementsByClassName('search__light')[0].classList.add('hide');",
+          "name":"Cartagena"
+        },
+        {
+          "code":"SMR",
+          "color":"#ffffff",
+          "url":"https://www.aviatur.com/vuelos/tiquetes-baratos-a-santa-marta",
+          "img":"https://www.aviatur.com/source/destinos/colombia-santa-marta.jpg",
+          "script":"document.getElementsByClassName('search__light')[0].classList.add('hide');",
+          "name":"Santa Marta"
+        },
+        {
+          "code":"BAQ",
+          "color":"#ffffff",
+          "url":"https://www.aviatur.com/vuelos/tiquetes-baratos-a-barranquilla",
+          "img":"https://www.aviatur.com/source/destinos/hombre-fuego-carnaval.jpg",
+          "script":"document.getElementsByClassName('search__light')[0].classList.add('hide');",
+          "name":"Barranquilla"
+        }
+      ]
+    },
+    {
+      "visible":false,
+      "text":{
+        "title":"Descubra cómo viajar por Colombia",
+        "subtitle":"Encuentre información útil para su viaje, consejos y recomendaciones acerca de destinos, gastronomía, experiencias, rutas turísticas y más en nuestro Blog Aviatur"
+      },
+      "list":[
+        {
+          "key":0,
+          "url":"https://www.aviatur.com/blog/experiencias/glamping-cerca-bogota",
+          "img":"https://www.aviatur.com/assets/aviatur_assets/img/promo/box/glamping-cerca-bogota_22775.jpeg",
+          "title":"En carpa, pero con glamour Glamping cerca de Bogotá",
+          "description":"Si quiere acampar para experimentar la naturaleza, sin necesidad de armar tiendas, comer enlatados o sufrir dolores de espalda, el Glamping es su mejor opción.",
+          "btn":"Leer más"
+        },
+        {
+          "key":1,
+          "url":"https://www.aviatur.com/blog/experiencias/hotel-las-islas-baru-cartagena",
+          "img":"https://www.aviatur.com/assets/aviatur_assets/img/promo/box/hotel-las-islas-baru-cartagena_22777.jpeg",
+          "title":"Hotel Las Islas - Una experiencia en el Caribe Colombiano",
+          "description":"“Las Islas” se impone como un hotel que ofrece el mejor confort, en medio de la naturaleza del Caribe colombiano, a minutos de Cartagena",
+          "btn":"Leer más"
+        }
+      ]
+    }
+  ],
+  "navigation":{"account":true},
+  "offers":{
+    "text":{
+      "airlines":{
+        "light":"Con descuentos ",
+        "bold":"Aerolíneas"
+      },
+      "flights":{
+        "bold":"Más de 400 opciones",
+        "light":"Para reencontrarse con Colombia"
+      },
+      "destination":{
+        "light":"Conoce una cuidad a la vez",
+        "bold":"Colombia"
+      },
+      "product":{
+        "light":"Ofertas especiales ",
+        "bold":"Paquetes"
+      }
+    }
+  },
+  "contact":{
+    "visible":false,
+    "img":"https://firebasestorage.googleapis.com/v0/b/whitemark-54535.appspot.com/o/ineedcall.png?alt=media"
+  },
+  "whatsapp":{
+    "visible":true,
+    "img":"https://firebasestorage.googleapis.com/v0/b/whitemark-54535.appspot.com/o/wpp.png?alt=media"
+  },
+  "buttons":[
+    {
+      "key":"flight",
+      "visible":true
+    },
+    {
+      "key":"package",
+      "visible":false
+    },
+    {
+      "key":"hotel",
+      "visible":true
+    },
+    {
+      "key":"bus",
+      "visible":true
+    },
+    {
+      "key":"package",
+      "visible":true
+    },
+    {
+      "key":"car",
+      "visible":true
+    },
+    {
+      "key":"experience",
+      "visible":true
+    },
+    {
+      "key":"train",
+      "visible":true
+    },
+    {
+      "key":"cruise",
+      "visible":true
+    },
+    {
+      "key":"insurance",
+      "visible":true
+    },
+    {
+      "key":"/experiencias/disney",
+      "visible":true
+    }
+  ],
+  "categories":[
+    {
+      "key":0,
+      "color":"#e3f2fd",
+      "url":"/paquetes/personalizada/paris",
+      "img":"https://www.aviatur.com/assets/aviatur_assets/img/package/types/paris.jpg",
+      "name":"Paris"
+    },
+    {
+      "key":1,
+      "color":"#e3f2fd",
+      "url":"/paquetes/personalizada/cancun",
+      "img":"https://www.aviatur.com/assets/aviatur_assets/img/package/types/cancun.jpg",
+      "name":"Cancún"
+    },
+    {
+      "key":2,
+      "color":"#e3f2fd",
+      "url":"/paquetes/especializado/cruceros",
+      "img":"https://www.aviatur.com/assets/aviatur_assets/img/package/types/cruiser.jpg",
+      "name":"Cruceros"
+    },
+    {
+      "key":3,
+      "color":"#e3f2fd",
+      "url":"/paquetes/especializado/turismo-de-aventura",
+      "img":"https://www.aviatur.com/assets/aviatur_assets/img/package/types/adventure.jpg",
+      "name":"Aventura"
+    },
+    {
+      "key":4,
+      "color":"#e3f2fd",
+      "url":"/paquetes/especializado/ecoturismo",
+      "img":"https://www.aviatur.com/assets/aviatur_assets/img/package/types/ecotourism.jpg",
+      "name":"Ecoturismo"
+    },
+    {
+      "key":5,
+      "color":"#e3f2fd",
+      "url":"/paquetes/personalizada/playa",
+      "img":"http://www.aviatur.com/assets/aviatur_assets/img/package/types/beach.jpg",
+      "name":"Playa"
+    }
+  ]
+}

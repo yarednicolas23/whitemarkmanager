@@ -1,0 +1,22 @@
+#tel-package{margin-top:40px !important;}
+.search-shared__datepicker-container{margin-top:24px}
+.search__light-explore{padding-top:3%;}
+#tel-package button{display:none;}
+section .content-scroll-horiz ul li a h6{font-weight:bold!important;}
+section .content-scroll-horiz ul li a h5{font-weight:normal!important;}
+.page-foot__legal{font-size: 12px!important;font-size: 0.8rem!important;}
+/*.info-slide{padding: 20px 14px!important}
+.product-info{min-height:176px!important}
+.subtitle-info .btn{width:100%}
+.subtitle-info p{margin-bottom:0.6rem}*/
+.nav-foot__compagny{padding-left:20px!important;width: 13.8% !important;}
+.nav-foot__download{width:14%!important}
+#resumeSearchFlight .search__light--box{box-shadow:none !important}
+.nav-foot-dwl{filter:grayscale(1)}
+.nav-foot-dwl:hover{filter:grayscale(0);background-image:url(https://whitemark-54535.firebaseapp.com/aviatur/img/footer-banner.png) !important}
+.nav-foot-dwl{background-image:url(https://whitemark-54535.firebaseapp.com/aviatur/img/footer-banner.png) !important}
+.nav-foot-comp{background-image:url(https://whitemark-54535.firebaseapp.com/aviatur/img/banner-footer-new.png)!important;filter:grayscale(1)}
+.nav-foot-comp:hover {background-image:url(https://whitemark-54535.firebaseapp.com/aviatur/img/banner-footer-new.png);filter:grayscale(0)}
+.nav-foot__compagny:nth-child(1){display:none}
+.nav-foot__compagny:nth-child(2){display:none}
+.search-submit-pack{margin-top:5px!important}
