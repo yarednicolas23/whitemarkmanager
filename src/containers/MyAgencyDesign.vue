@@ -726,7 +726,7 @@
                       <p><b>Dirección: </b> {{agency.location}}</p>
                     </div>
                     <div class="col">
-                      <p>| <b> Telefono: </b> {{agency.location}} | </p>
+                      <p>| <b> Telefono: </b> {{agency.phone}} | </p>
                     </div>
                     <div class="col">
                       <p><b>Correo: </b>{{agency.mail}}</p>

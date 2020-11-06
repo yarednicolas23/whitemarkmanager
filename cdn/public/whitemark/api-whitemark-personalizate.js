@@ -38,6 +38,9 @@ firebase.database().ref('agencies').once('value', (agencies) => {
       fav.type='image/x-icon'
       fav.rel='icon'
     }
+    if (referermark=='vacacionesaviatur') {
+      document.getElementsByClassName('lazy')[0].src=document.getElementsByClassName('lazy')[0].src.replace("/_","/")
+    }
     document.getElementsByTagName('head')[0].append(fav)
     var elementsedit = document.querySelectorAll('.nav-main__item, .btn--accent , .page-foot__social,.btn:not(.btn--inactive)');
     if (fireAgency.page.background!=null) {

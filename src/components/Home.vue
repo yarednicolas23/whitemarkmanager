@@ -12,7 +12,7 @@
               <li><a class="grey-text" href="#how">¿Como Funciona?</a></li>
               <li><a class="grey-text" href="#moreinfo">¿Que debo hacer?</a></li>
               <li><a class="grey-text" href="#register">Registrarme</a></li>
-              <li><button class="btn btn-circle  modal-trigger" href="#login">Inciar Sesión</button></li>
+              <li><button class="btn btn-circle  modal-trigger" href="#login">Iniciar Sesión</button></li>
             </ul>
           </div>
         </nav>
