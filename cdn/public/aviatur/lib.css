@@ -20,4 +20,5 @@ section .content-scroll-horiz ul li a h5{font-weight:normal!important;}
 .nav-foot__compagny:nth-child(1){display:none}
 .nav-foot__compagny:nth-child(2){display:none}
 .search-submit-pack{margin-top:5px!important}
-.overlay{z-index: 1000 !important;}
+.overlay{z-index: 999 !important;}
+.resume__row-title{margin-bottom: 1.4rem!important;}
