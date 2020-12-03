@@ -5,7 +5,7 @@ style.rel='stylesheet';
 document.getElementsByTagName('head')[0].append(style);
 
 setTimeout(function(){ document.getElementsByClassName('overlay')[0].style.display = "inline-table";
-document.getElementsByClassName('overlay')[0].style.background ='rgba(255, 255, 255, 0.95)'; }, 1000);
+document.getElementsByClassName('overlay')[0].style.background ='white'; }, 1000);
 
 var referermark =document.currentScript.getAttribute('referer');
 var config = {
@@ -39,7 +39,12 @@ firebase.database().ref('agencies').once('value', (agencies) => {
       fav.rel='icon'
     }
     if (referermark=='vacacionesaviatur') {
-      document.getElementsByClassName('lazy')[0].src=document.getElementsByClassName('lazy')[0].src.replace("/_","/")
+      if (document.getElementsByClassName('lazy').length!=0) {
+        if (document.location.pathname=="/") {
+          document.getElementsByClassName('lazy')[0].src=document.getElementsByClassName('lazy')[0].src.replace("/_","/")
+        }
+      }
+
     }
     document.getElementsByTagName('head')[0].append(fav)
     var elementsedit = document.querySelectorAll('.nav-main__item, .btn--accent , .page-foot__social,.btn:not(.btn--inactive)');
