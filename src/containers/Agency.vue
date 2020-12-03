@@ -86,7 +86,7 @@
   }
 
   .search__engine {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0);
     padding: 20px 20px !important;
     margin: 20px;
   }
@@ -882,8 +882,8 @@
                      <div class="content">
                        <div class="row">
                          <div class="col s12 container-background" style="box-shadow: -10px -10px 10px 10px #aaaaaa;" v-bind:style="'background-image:url(https://whitemark.grupoaviatur.com/assets/whitemark_assets/img/header/_covers/'+agency.page.background+'.jpg)'">
-                           <div class="wrapper" v-bind:class="agency.page.background=='no-image'?'':'black-trasnparent'" style="padding-bottom:20px;">
-                             <div class="col s12 no-padding" v-bind:class="agency.page.background=='no-image'?'':' white-text'">
+                           <div class="wrapper" v-bind:class="agency.page.background=='no-image'?'':'black-transparent'" >
+                             <div class="col s12 no-padding" v-bind:class="agency.page.background=='no-image'?'':' white-text'" v-bind:style="'color:'+agency.page.color + ';' ">
                                <div class="col">
                                  <p><b>Dirección: </b> {{agency.location}}</p>
                                </div>

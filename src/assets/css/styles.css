@@ -604,6 +604,8 @@ a {
 }
 
 
-/*---------------- .black-trasnparent{
+.black-transparent{
+  height: 100%;
+  display: inline-block;
   background-color: #1b1b1b6e;
-} ----------------*/
+}
