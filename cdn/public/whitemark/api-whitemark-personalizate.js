@@ -24,6 +24,15 @@ firebase.database().ref('agencies').once('value', (agencies) => {
       fireAgency = element.val()
     }
   });
+
+  if (referermark=='aviaseguros') {
+    if (document.location.pathname.includes("detalle")) {
+      if (document.getElementsByClassName('pse').length!=0) {
+        document.getElementsByClassName('pse')[0].classList.add("hide")
+        document.getElementsByClassName('js_payment_options')[0].lastElementChild.classList.add("hide")
+      }
+    }
+  }
   if (fireAgency.page != null) {
     var imgmark = document.querySelectorAll('.page-head__aviatur');
 
@@ -44,7 +53,6 @@ firebase.database().ref('agencies').once('value', (agencies) => {
           document.getElementsByClassName('lazy')[0].src=document.getElementsByClassName('lazy')[0].src.replace("/_","/")
         }
       }
-
     }
     document.getElementsByTagName('head')[0].append(fav)
     var elementsedit = document.querySelectorAll('.nav-main__item, .btn--accent , .page-foot__social,.btn:not(.btn--inactive)');
