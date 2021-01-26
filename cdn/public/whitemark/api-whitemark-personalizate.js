@@ -121,6 +121,8 @@ firebase.database().ref('agencies').once('value', (agencies) => {
 
       }
     }
+    document.getElementsByClassName("nav-main__title")[1].textContent="Paquetes"
+    document.getElementsByClassName("nav-main__title")[3].textContent="Vacaciones"
     // Create our stylesheet
     var style = document.createElement('style');
     style.innerHTML =
