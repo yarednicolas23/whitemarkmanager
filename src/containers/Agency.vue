@@ -914,7 +914,7 @@
                                <div class="col navbutton" v-if="agency.page.button.flightsAndHotels">
                                  <div class="btn-seacher"  v-bind:style="'background-color:'+agency.page.color + ';' ">
                                    <img class="responsive-img" src="./../assets/img/icons/flight+hotel.svg" alt="">
-                                   Vuelos + Hotel
+                                   Paquete de vacaciones
                                  </div>
                                </div>
                                <div class="col navbutton" v-if="agency.page.button.packages">
@@ -1594,11 +1594,11 @@ export default {
         var instance = M.Modal.init(Modalelem)
         try {
           if(response.id!=null){
+            this.loaderservice=!this.loaderservice
+            this.activatebutton=false
             this.agency.state = this.agency.state==0?2:this.agency.state!=0?0:2
             this.SaveChanges(this.agency)
             this.$root.messageService("toast", "La agencias esta activa 🤖")
-            this.loaderservice=!this.loaderservice
-            this.activatebutton=false
           }else if(response.error!=null){
             this.$root.messageService("toast",response.error_description)
           }

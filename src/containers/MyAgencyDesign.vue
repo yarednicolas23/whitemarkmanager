@@ -752,7 +752,7 @@
                     <div class="col navbutton" v-if="agency.page.button.flightsAndHotels">
                       <div class="btn-seacher"  v-bind:style="'background-color:'+agency.page.color + ';' ">
                         <img class="responsive-img" src="./../assets/img/icons/flight+hotel.svg" alt="">
-                        Vuelos + Hotel
+                        Paquete de vacaciones
                       </div>
                     </div>
                     <div class="col navbutton" v-if="agency.page.button.packages">
