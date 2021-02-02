@@ -1565,7 +1565,7 @@ export default {
     activateMark:function(){
       this.loaderservice=!this.loaderservice
       this.activatebutton=true
-      var d={
+      var data={
         "agency":  "Aviatur S.A Marcas Blancas",
         "name": this.agency.referer,
         "url": this.agency.web,
@@ -1576,22 +1576,38 @@ export default {
         "email": this.agency.mail,
         "officeId": ""
       }
-      console.log(JSON.stringify(d));
-      var data = JSON.stringify({});
+      var d = JSON.stringify(data);
       var url = 'https://qa.aviatur.com/api/whitemark/create';
 
       fetch(url, {
         method: 'POST', // or 'PUT'
-        body: data, // data can be `string` or {object}!
+        body: d, // data can be `string` or {object}!
         headers:{
           'authorization':"Bearer "+this.bearer,
           'Content-Type': 'application/json',
           'Accept':'application/json'
         }
-      }).then(res => res.json())
+      })
+      .then((res) => res.json())
+      .then((response)=>{
+        var Modalelem = document.querySelector('.modal')
+        var instance = M.Modal.init(Modalelem)
+        try {
+          if(response.id!=null){
+            this.agency.state = this.agency.state==0?2:this.agency.state!=0?0:2
+            this.SaveChanges(this.agency)
+            this.$root.messageService("toast", "La agencias esta activa 🤖")
+            this.loaderservice=!this.loaderservice
+            this.activatebutton=false
+          }else if(response.error!=null){
+            this.$root.messageService("toast",response.error_description)
+          }
+          instance.close()
+        } catch (e) {
+          console.log(e.error);
+        }
+      })
       .catch(error => console.error('Error:', error))
-      .then(response => console.log('Success:', response));
-
       /*
       $.ajax({
         "async": true,
