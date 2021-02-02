@@ -1072,13 +1072,14 @@
         <div class="modal-content">
           <h4>¿Está seguro que desea activar esta marca?</h4>
           <p>Recuerde que al dar click en "Activar" la pagina web estará activa en la URL que este registrada actualmente.</p>
-          <p>Recuerde también verificar los datos URL, referer, telefóno, dirección y email.</p>
-          <div class="">
-            <div class="input-field col s8">
-              <input placeholder="Bearer" id="key" type="text" v-model="bearer" class="validate">
-              <label for="key">Ingrese el Bearer Key:</label>
-            </div>
-          </div>
+          <p>Recuerde también verificar los datos</p>
+          <ul>
+            <li>URL</li>
+            <li>referer</li>
+            <li>telefóno</li>
+            <li>dirección</li>
+            <li>email</li>
+          </ul>
           <div class="center" v-if="loaderservice">
             <div class="preloader-wrapper active">
               <div class="spinner-layer spinner-blue-only">
@@ -1426,6 +1427,10 @@ export default {
     if (this.$route.params.id != null) {
       this.getAgency(this.$route.params.id)
     }
+
+    firebase.database().ref('other').child('create').once('value').then((snapshot)=>{
+      this.bearer = snapshot.val()
+    })
   },
   methods:{
     getAgency:function(agency){

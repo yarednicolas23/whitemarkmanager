@@ -47,6 +47,15 @@ firebase.database().ref('agencies').once('value', (agencies) => {
       fav.type='image/x-icon'
       fav.rel='icon'
     }
+    if (referermark=='aeroviajespacifico') {
+      var fav=document.createElement('link')
+      fav.href ='https://aeroviajespacifico.co/wp-content/uploads/2020/10/logo_aeroviajes-100x96.png'
+      fav.type='image/x-icon'
+      fav.rel='icon'
+      if (document.location.pathname=="/iniciar-sesion") {
+        document.getElementsByClassName("list-bare")[0].children[3].children[0].children[1].removeAttribute("class","hide")
+      }
+    }
     if (referermark=='vacacionesaviatur') {
       if (document.getElementsByClassName('lazy').length!=0) {
         if (document.location.pathname=="/") {
