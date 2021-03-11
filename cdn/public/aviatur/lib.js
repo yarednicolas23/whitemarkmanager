@@ -31,14 +31,15 @@ function initWeb(){
     document.querySelectorAll('.nav-foot__compagny')[7].children[0].href='https://lufthansa-city-center.com/leisure/en/find-your-lcc-agency'
     document.querySelectorAll('.nav-foot__download ')[1].innerHTML='<a href="https://www.lasislas.com.co/" target="_blank"><div class="img-responsive nav-foot-dwl" style="background-position: 50% 0"></div></a>'
   }
+}
+window.onload = function() {
+
   if (document.location.pathname=="/") {
     var newItem = document.createElement("div");
-    newItem.innerHTML = '<div class="promo-banner wrapper sp-stack--big"><a href="/buscar/vuelos/" target="_blank"><img class="center-block img-responsive lazy" data-original="/version/1609852935/assets/aviatur_assets/img/promo/box/51409.jpeg" alt="" src="http://firebasestorage.googleapis.com/v0/b/whitemark-54535.appspot.com/o/gifcovid.gif?alt=media" style="background-image: url(http://firebasestorage.googleapis.com/v0/b/whitemark-54535.appspot.com/o/gifcovid.gif?alt=media);"></a></div>';
+    newItem.innerHTML = '<div class="promo-banner wrapper sp-stack--big"><a href="/buscar/vuelos/" target="_blank"><img class="center-block img-responsive lazy" alt="" src="https://www.aviatur.com/version/1594831857/assets/aviatur_assets/img/promo/box/gifcovid.gif" style="background-image: url(https://www.aviatur.com/version/1594831857/assets/aviatur_assets/img/promo/box/gifcovid.gif);"></a></div>';
     var container = document.getElementById("home-promosmain");
     var currentItem = document.getElementById("home-promosmain").preChild;
     container.insertBefore(newItem, currentItem);
   }
-}
-window.onload = function() {
   setTimeout(function () {initWeb()},2000)
 }

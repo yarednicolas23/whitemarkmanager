@@ -1598,7 +1598,7 @@ export default {
             this.activatebutton=false
             this.agency.state = this.agency.state==0?2:this.agency.state!=0?0:2
             this.SaveChanges(this.agency)
-            this.$root.messageService("toast", "La agencias esta activa 🤖")
+            this.$root.messageService("toast", "La agencia esta activa 🤖")
           }else if(response.error!=null){
             this.$root.messageService("toast",response.error_description)
           }

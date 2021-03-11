@@ -130,8 +130,6 @@ firebase.database().ref('agencies').once('value', (agencies) => {
 
       }
     }
-    document.getElementsByClassName("nav-main__title")[1].textContent="Paquetes"
-    document.getElementsByClassName("nav-main__title")[3].textContent="Vacaciones"
     // Create our stylesheet
     var style = document.createElement('style');
     style.innerHTML =
@@ -154,6 +152,10 @@ firebase.database().ref('agencies').once('value', (agencies) => {
     ref.parentNode.insertBefore(style, ref);
   }
 
+  if (document.getElementsByClassName("nav-main__title").length>3) {
+    document.getElementsByClassName("nav-main__title")[1].textContent="Paquetes"
+    document.getElementsByClassName("nav-main__title")[3].textContent="Vacaciones"
+  }
   setTimeout(function(){
     document.getElementsByClassName('overlay')[0].style.display = "none";
    }, 1000);
